@@ -2,7 +2,9 @@
 title: "Project_2"
 author: "Taylor Ashby"
 date: "10/16/2020"
-output: html_document
+output: rmarkdown::github_document
+params: 
+      day: 1
 ---
 
 ```{r setup, include=FALSE}
@@ -16,6 +18,7 @@ library(caret)
 library(GGally)
 library(scales)
 library(corrplot)
+library(rmarkdown)
 ```
 
 # Introduction
@@ -35,7 +38,7 @@ analysis of the total daily bike count. We will then filter to the weekday of in
 bike<-read_csv("day.csv")
 
 #Drop casual and registered variables, then filter to desired weekday
-bike<-select(bike,-casual,-registered) %>% filter(weekday==1)
+bike<-select(bike,-casual,-registered) %>% filter(weekday==params$day)
 
 ```
 
@@ -86,8 +89,9 @@ easier to work with if we simply remove those from the training data set.
 bikeTrain<-bikeTrain %>% select(-instant,-dteday)
 
 #we can also remove variables where their information is captured by other variables
-#i.e., we do not need to include both weekday and workingday indicators.
-bikeTrain<-bikeTrain %>% select(-holiday,-weekday,-temp, -hum)
+#i.e., we do not need to include the weekday and workingday indicators since we are
+#going to create separate reports for each weekday.
+bikeTrain<-bikeTrain %>% select(-holiday,-weekday,-workingday,-temp, -hum)
 
 ```
 

@@ -1,0 +1,133 @@
+---
+title: "Project_2"
+author: "Taylor Ashby"
+date: "10/16/2020"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+#packages
+library(tidyverse)
+library(dplyr)
+library(ggplot2)
+library(readr)
+library(caret)
+library(GGally)
+library(scales)
+library(corrplot)
+```
+
+# Introduction
+For this analysis, our goal is to predict the daily count of bikes used from a Washington,
+D.C.-area bike sharing service. There are several variables included that we would 
+expect to influence how many bikes are used. For this analysis, we will focus on the following variables: season, yr, mnth, workingday, weathersit, atemp, and windspeed. 
+Descriptions of these variables can be found [here](https://archive.ics.uci.edu/ml/datasets/Bike+Sharing+Dataset).
+
+We will use two methods to model the *cnt* variable: regression tree and boosted tree model. 
+A regression tree is a model that splits data into regions and makes a prediction based on the mean value within a given region. A boosted tree model is a way to enhance the prediction by growing trees sequentially by modeling the residuals of the previous tree.
+
+The first thing we need to is to read in the data. Here we will also drop the casual 
+and registered variables, as they are classifications that are not relevant to our 
+analysis of the total daily bike count. We will then filter to the weekday of interest.
+```{r read}
+#Read in bike share data
+bike<-read_csv("day.csv")
+
+#Drop casual and registered variables, then filter to desired weekday
+bike<-select(bike,-casual,-registered) %>% filter(weekday==1)
+
+```
+
+Next we need to split the data into a training and test set.
+```{r split}
+#Partition into training and test sets
+set.seed(123)
+bikeIndex<-createDataPartition(bike$cnt,p=0.7,list=FALSE)
+bikeTrain<-bike[bikeIndex,]
+bikeTest<-bike[bikeIndex,]
+```
+
+Before we begin modeling the *cnt* variable, we should view summary statistics and plot
+some of the variables to better understand the data and their relationships with 
+the variable of interest.
+```{r EDA}
+#View summary statistics for training data
+summary(bikeTrain,digits=2)
+
+#view the distribution of the variable of interest
+g<-ggplot(bikeTrain,aes(x=cnt,y=..density..))
+g+geom_histogram()+labs(title="Histogram of Bike Counts")#how to fix y-axis %s
+
+#Create scatterplots for variables that are likely to be important predictors
+g<-ggplot(bikeTrain,aes(y=cnt,fill=as.factor(workingday)))
+
+g+geom_boxplot()+ylab("Bike Count")+xlab("Is it a Working Day?")+ 
+  labs(title="Relationship of workingday to cnt") #why is x-axis -0.2 to 0.2?
+
+
+g<-ggplot(bikeTrain,aes(y=cnt,fill=as.factor(weathersit)))
+
+g+geom_boxplot()+ylab("Bike Count")+xlab("What is the weather like")+ 
+  labs(title="Relationship of weathersit to cnt") #why is x-axis -0.2 to 0.2?
+
+
+g<-ggplot(bikeTrain,aes(y=cnt,fill=as.factor(season)))
+
+g+geom_boxplot()+ylab("Bike Count")+xlab("What season is it?")+ 
+  labs(title="Relationship of season to cnt") #why is x-axis -0.2 to 0.2?
+
+```
+
+It looks like there are a few variables we will not need for modeling. It will be 
+easier to work with if we simply remove those from the training data set.
+```{r trimvars}
+#first remove variables that are not applicable for prediction of cnt
+bikeTrain<-bikeTrain %>% select(-instant,-dteday)
+
+#we can also remove variables where their information is captured by other variables
+#i.e., we do not need to include both weekday and workingday indicators.
+bikeTrain<-bikeTrain %>% select(-holiday,-weekday,-temp, -hum)
+
+```
+
+
+Now we are ready to fit the models. First we will fit a tree model, which separates
+the data into regions and uses the mean of the a given region to predict the responses. Then we will try a boosted tree model. This approach grows many trees sequentially, modeling residuals as the responses. By aggregating over many trees, we lose some interpretability, but the predictions should be better.
+
+As we fit the models, we are also using "leave one out" cross-validation to determine
+the optimal values of the tuning parameters so that we can get the optimal model fit.
+The output will automatically use the bestTune values of these parameters when we go to make predictions.
+
+```{r fits}
+#now we are ready to fit the tree
+train_control<-trainControl(method="LOOCV")
+treeFit<-train(cnt ~ ., data=bikeTrain, method="rpart", 
+               preProcess=c("center","scale"),
+               trControl=train_control, 
+               tuneGrid=NULL)
+treeFit$results
+treeFit$bestTune
+
+#boosted tree model
+boostFit<-train(cnt ~ ., data=bikeTrain, method="gbm", 
+                preProcess=c("center","scale"),
+                trControl=train_control, 
+                tuneGrid=NULL, verbose=FALSE) #why does it produce all those different iterations, with no apparent variation?
+
+boostFit$results
+boostFit$bestTune
+
+```
+
+Finally, we will make predictions using our best model fits and data from the test set. We can compare RMSE to determine which one is best (smaller RMSE is better).
+```{r predict}
+#predict values on test set and compare RMSEs
+treePred<-predict(treeFit,newdata=dplyr::select(bikeTest,-cnt))
+postResample(treePred,bikeTest$cnt)
+
+boostPred<-predict(boostFit,newdata=dplyr::select(bikeTest,-cnt))
+postResample(boostPred,bikeTest$cnt)
+```
+
+As expected, the boosted tree tends to have lower RMSE when applied to the test data. By fitting multiple trees sequentially, rather than just a single tree, the boosting method provides a better prediction. 

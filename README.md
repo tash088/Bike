@@ -1,7 +1,7 @@
 ---
 title: "Automation"
 author: "Taylor Ashby"
-date: "10/15/2020"
+date: "2020-10-15"
 output: rmarkdown::github_document
 ---
 

@@ -149,7 +149,7 @@ apply(reports, MARGIN = 1,
     ## /Applications/RStudio.app/Contents/MacOS/pandoc/pandoc +RTS -K512m -RTS Monday.md --to html4 --from gfm --output Monday.html --standalone --self-contained --highlight-style pygments --template /Library/Frameworks/R.framework/Versions/4.0/Resources/library/rmarkdown/rmarkdown/templates/github_document/resources/preview.html --variable 'github-markdown-css:/Library/Frameworks/R.framework/Versions/4.0/Resources/library/rmarkdown/rmarkdown/templates/github_document/resources/github.css' --email-obfuscation none --metadata pagetitle=PREVIEW
 
     ## 
-    ## Preview created: /var/folders/h7/s_z1dr090z5376xv535833rh0000gn/T//Rtmp3IDzZB/preview-b5622fcdb123.html
+    ## Preview created: /var/folders/h7/s_z1dr090z5376xv535833rh0000gn/T//Rtmp3IDzZB/preview-b7a82c059296.html
 
     ## 
     ## Output created: Monday.md
@@ -206,7 +206,7 @@ apply(reports, MARGIN = 1,
     ## /Applications/RStudio.app/Contents/MacOS/pandoc/pandoc +RTS -K512m -RTS Tuesday.md --to html4 --from gfm --output Tuesday.html --standalone --self-contained --highlight-style pygments --template /Library/Frameworks/R.framework/Versions/4.0/Resources/library/rmarkdown/rmarkdown/templates/github_document/resources/preview.html --variable 'github-markdown-css:/Library/Frameworks/R.framework/Versions/4.0/Resources/library/rmarkdown/rmarkdown/templates/github_document/resources/github.css' --email-obfuscation none --metadata pagetitle=PREVIEW
 
     ## 
-    ## Preview created: /var/folders/h7/s_z1dr090z5376xv535833rh0000gn/T//Rtmp3IDzZB/preview-b56212b878.html
+    ## Preview created: /var/folders/h7/s_z1dr090z5376xv535833rh0000gn/T//Rtmp3IDzZB/preview-b7a81bf3ab9.html
 
     ## 
     ## Output created: Tuesday.md
@@ -263,7 +263,7 @@ apply(reports, MARGIN = 1,
     ## /Applications/RStudio.app/Contents/MacOS/pandoc/pandoc +RTS -K512m -RTS Wednesday.md --to html4 --from gfm --output Wednesday.html --standalone --self-contained --highlight-style pygments --template /Library/Frameworks/R.framework/Versions/4.0/Resources/library/rmarkdown/rmarkdown/templates/github_document/resources/preview.html --variable 'github-markdown-css:/Library/Frameworks/R.framework/Versions/4.0/Resources/library/rmarkdown/rmarkdown/templates/github_document/resources/github.css' --email-obfuscation none --metadata pagetitle=PREVIEW
 
     ## 
-    ## Preview created: /var/folders/h7/s_z1dr090z5376xv535833rh0000gn/T//Rtmp3IDzZB/preview-b562e73f480.html
+    ## Preview created: /var/folders/h7/s_z1dr090z5376xv535833rh0000gn/T//Rtmp3IDzZB/preview-b7a823796044.html
 
     ## 
     ## Output created: Wednesday.md
@@ -320,7 +320,7 @@ apply(reports, MARGIN = 1,
     ## /Applications/RStudio.app/Contents/MacOS/pandoc/pandoc +RTS -K512m -RTS Thursday.md --to html4 --from gfm --output Thursday.html --standalone --self-contained --highlight-style pygments --template /Library/Frameworks/R.framework/Versions/4.0/Resources/library/rmarkdown/rmarkdown/templates/github_document/resources/preview.html --variable 'github-markdown-css:/Library/Frameworks/R.framework/Versions/4.0/Resources/library/rmarkdown/rmarkdown/templates/github_document/resources/github.css' --email-obfuscation none --metadata pagetitle=PREVIEW
 
     ## 
-    ## Preview created: /var/folders/h7/s_z1dr090z5376xv535833rh0000gn/T//Rtmp3IDzZB/preview-b5622af4dbda.html
+    ## Preview created: /var/folders/h7/s_z1dr090z5376xv535833rh0000gn/T//Rtmp3IDzZB/preview-b7a83b8ee11.html
 
     ## 
     ## Output created: Thursday.md
@@ -377,7 +377,7 @@ apply(reports, MARGIN = 1,
     ## /Applications/RStudio.app/Contents/MacOS/pandoc/pandoc +RTS -K512m -RTS Friday.md --to html4 --from gfm --output Friday.html --standalone --self-contained --highlight-style pygments --template /Library/Frameworks/R.framework/Versions/4.0/Resources/library/rmarkdown/rmarkdown/templates/github_document/resources/preview.html --variable 'github-markdown-css:/Library/Frameworks/R.framework/Versions/4.0/Resources/library/rmarkdown/rmarkdown/templates/github_document/resources/github.css' --email-obfuscation none --metadata pagetitle=PREVIEW
 
     ## 
-    ## Preview created: /var/folders/h7/s_z1dr090z5376xv535833rh0000gn/T//Rtmp3IDzZB/preview-b5623dd82d6e.html
+    ## Preview created: /var/folders/h7/s_z1dr090z5376xv535833rh0000gn/T//Rtmp3IDzZB/preview-b7a85f96b6f5.html
 
     ## 
     ## Output created: Friday.md
@@ -434,7 +434,7 @@ apply(reports, MARGIN = 1,
     ## /Applications/RStudio.app/Contents/MacOS/pandoc/pandoc +RTS -K512m -RTS Saturday.md --to html4 --from gfm --output Saturday.html --standalone --self-contained --highlight-style pygments --template /Library/Frameworks/R.framework/Versions/4.0/Resources/library/rmarkdown/rmarkdown/templates/github_document/resources/preview.html --variable 'github-markdown-css:/Library/Frameworks/R.framework/Versions/4.0/Resources/library/rmarkdown/rmarkdown/templates/github_document/resources/github.css' --email-obfuscation none --metadata pagetitle=PREVIEW
 
     ## 
-    ## Preview created: /var/folders/h7/s_z1dr090z5376xv535833rh0000gn/T//Rtmp3IDzZB/preview-b5623777d93f.html
+    ## Preview created: /var/folders/h7/s_z1dr090z5376xv535833rh0000gn/T//Rtmp3IDzZB/preview-b7a85c05721c.html
 
     ## 
     ## Output created: Saturday.md
@@ -448,7 +448,14 @@ apply(reports, MARGIN = 1,
 
 The output files can be found at the links below:
 
-[Monday is available here](Monday.md) [Tuesday is available
-here](Tuesday.md) [Wednesday is available here](Wednesday.md) [Thursday
-is available here](Thursday.md) [Friday is available here](Friday.md)
+[Monday is available here](Monday.md)
+
+[Tuesday is available here](Tuesday.md)
+
+[Wednesday is available here](Wednesday.md)
+
+[Thursday is available here](Thursday.md)
+
+[Friday is available here](Friday.md)
+
 [Saturday is available here](Saturday.md)

@@ -43,9 +43,14 @@ apply(reports, MARGIN = 1,
 
 The output files can be found at the links below:
 
-[Monday is available here](Monday.md)
-[Tuesday is available here](Tuesday.md)
-[Wednesday is available here](Wednesday.md)
-[Thursday is available here](Thursday.md)
-[Friday is available here](Friday.md)
-[Saturday is available here](Saturday.md)
+  [Monday is available here](Monday.md)
+  
+  [Tuesday is available here](Tuesday.md)
+
+  [Wednesday is available here](Wednesday.md)
+  
+  [Thursday is available here](Thursday.md)
+  
+  [Friday is available here](Friday.md)
+  
+  [Saturday is available here](Saturday.md)

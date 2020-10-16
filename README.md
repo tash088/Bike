@@ -1,7 +1,7 @@
 ---
 title: "Project 2 README"
 author: "Taylor Ashby"
-date: "10/15/2020"
+date: "2020-10-15"
 output: rmarkdown::github_document
 ---
 The purpose of this repo is to store relevant files and code for predicting the utilization (i.e., count) of bikes bikes in a D.C.-area bike sharing program. We conduct EDA and model the counts using tree/boosted tree modeling techniques.

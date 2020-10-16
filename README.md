@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 Project 2 README
 ================
 Taylor Ashby
@@ -82,6 +83,21 @@ is accomplished by knitting with parameters.
 dayID<-c(1:6)
 output_file<-c("Monday.md","Tuesday.md","Wednesday.md","Thursday.md",
                     "Friday.md","Saturday.md")
+=======
+---
+title: "Automation"
+author: "Taylor Ashby"
+date: "2020-10-15"
+output: rmarkdown::github_document
+---
+
+This file creates the six different reports, one for each day of the week (excluding Sundays, since there is no data for Sundays). This is accomplished by knitting with parameters. 
+
+```{r automate}
+dayID<-c(1:6)
+output_file<-c("Monday.html","Tuesday.html","Wednesday.html","Thursday.html",
+                    "Friday.html","Saturday.html")
+>>>>>>> c8cd6b4850df7ffb6899a2e31be9afa70271e81c
 #create a list for each team with just the team name parameter
 params = lapply(dayID, FUN = function(x){list(day = x)})
 
@@ -97,6 +113,7 @@ apply(reports, MARGIN = 1,
                 })
 ```
 
+<<<<<<< HEAD
     ## 
     ## 
     ## processing file: Project_2.Rmd
@@ -452,3 +469,5 @@ The output files can be found at the links below:
 here](Tuesday.md) [Wednesday is available here](Wednesday.md) [Thursday
 is available here](Thursday.md) [Friday is available here](Friday.md)
 [Saturday is available here](Saturday.md)
+=======
+>>>>>>> c8cd6b4850df7ffb6899a2e31be9afa70271e81c

@@ -7,12 +7,14 @@ library(caret)
 library(GGally)
 library(scales)
 library(corrplot)
+library(rmarkdown)
 
 #Read in bike share data
 bike<-read_csv("day.csv")
+summary(bike)
 
 #Drop casual and registered variables, then filter to desired weekday
-bike<-select(bike,-casual,-registered) %>% filter(weekday==1)
+bike<-select(bike,-casual,-registered) %>% filter(weekday==5)
 view(bike)
 
 #Partition into training and test sets
@@ -50,8 +52,9 @@ g+geom_boxplot()+ylab("Bike Count")+xlab("What season is it?")+
 bikeTrain<-bikeTrain %>% select(-instant,-dteday)
 
 #we can also remove variables where their information is captured by other variables
-#i.e., we do not need to include both weekday and workingday indicators.
-bikeTrain<-bikeTrain %>% select(-holiday,-weekday,-temp, -hum)
+#i.e., we do not need to include the weekday and workingday indicators since we are
+#going to create separate reports for each weekday.
+bikeTrain<-bikeTrain %>% select(-holiday,-weekday,-workingday,-temp, -hum)
 
 view(bikeTrain)
 

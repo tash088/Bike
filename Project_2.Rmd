@@ -19,6 +19,7 @@ library(GGally)
 library(scales)
 library(corrplot)
 library(rmarkdown)
+library(knitr)
 ```
 
 # Introduction
@@ -91,7 +92,7 @@ bikeTrain<-bikeTrain %>% select(-instant,-dteday)
 #we can also remove variables where their information is captured by other variables
 #i.e., we do not need to include the weekday and workingday indicators since we are
 #going to create separate reports for each weekday.
-bikeTrain<-bikeTrain %>% select(-holiday,-weekday,-workingday,-temp, -hum)
+bikeTrain<-bikeTrain %>% select(-holiday,-workingday,-temp, -hum)
 
 ```
 
@@ -128,10 +129,43 @@ Finally, we will make predictions using our best model fits and data from the te
 ```{r predict}
 #predict values on test set and compare RMSEs
 treePred<-predict(treeFit,newdata=dplyr::select(bikeTest,-cnt))
-postResample(treePred,bikeTest$cnt)
+a<- postResample(treePred,bikeTest$cnt)
 
 boostPred<-predict(boostFit,newdata=dplyr::select(bikeTest,-cnt))
-postResample(boostPred,bikeTest$cnt)
+b<- postResample(boostPred,bikeTest$cnt)
 ```
 
 As expected, the boosted tree tends to have lower RMSE when applied to the test data. By fitting multiple trees sequentially, rather than just a single tree, the boosting method provides a better prediction. 
+
+
+
+# Second Part
+
+## Linear model fit
+```{r}
+#Secondary Analysis of the tree fit
+
+Fit2<- lm(cnt ~  season + weathersit + windspeed + atemp, data=bikeTrain)
+Fit2
+
+```
+
+```{r}
+#predict values on test set and compare RMSEs
+Pred2<-predict(Fit2,newdata=dplyr::select(bikeTest,-cnt, season, weathersit, windspeed, atemp))
+c<- postResample(Pred2,bikeTest$cnt)
+
+```
+
+#table the RMSE from both of the model fits
+
+```{r}
+d<- c(a[1], b[1], c[1])
+names(d)<- c("Tree_RMSE","Boosted_RMSE", "LM_RMSE" )
+d
+```
+
+From the above table the model having lowest value of RMSE is chosen to be appropriate to fit the data set.
+
+
+

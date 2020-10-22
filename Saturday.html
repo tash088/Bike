@@ -1,0 +1,2355 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+<meta charset="utf-8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="pandoc" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<style type="text/css">
+@font-face {
+font-family: octicons-link;
+src: url(data:font/woff;charset=utf-8;base64,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) format('woff');
+}
+body {
+-webkit-text-size-adjust: 100%;
+text-size-adjust: 100%;
+color: #333;
+font-family: "Helvetica Neue", Helvetica, "Segoe UI", Arial, freesans, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+font-size: 16px;
+line-height: 1.6;
+word-wrap: break-word;
+}
+a {
+background-color: transparent;
+}
+a:active,
+a:hover {
+outline: 0;
+}
+strong {
+font-weight: bold;
+}
+h1 {
+font-size: 2em;
+margin: 0.67em 0;
+}
+img {
+border: 0;
+}
+hr {
+box-sizing: content-box;
+height: 0;
+}
+pre {
+overflow: auto;
+}
+code,
+kbd,
+pre {
+font-family: monospace, monospace;
+font-size: 1em;
+}
+input {
+color: inherit;
+font: inherit;
+margin: 0;
+}
+html input[disabled] {
+cursor: default;
+}
+input {
+line-height: normal;
+}
+input[type="checkbox"] {
+box-sizing: border-box;
+padding: 0;
+}
+table {
+border-collapse: collapse;
+border-spacing: 0;
+}
+td,
+th {
+padding: 0;
+}
+* {
+box-sizing: border-box;
+}
+input {
+font: 13px / 1.4 Helvetica, arial, nimbussansl, liberationsans, freesans, clean, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+a {
+color: #4078c0;
+text-decoration: none;
+}
+a:hover,
+a:active {
+text-decoration: underline;
+}
+hr {
+height: 0;
+margin: 15px 0;
+overflow: hidden;
+background: transparent;
+border: 0;
+border-bottom: 1px solid #ddd;
+}
+hr:before {
+display: table;
+content: "";
+}
+hr:after {
+display: table;
+clear: both;
+content: "";
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+margin-top: 15px;
+margin-bottom: 15px;
+line-height: 1.1;
+}
+h1 {
+font-size: 30px;
+}
+h2 {
+font-size: 21px;
+}
+h3 {
+font-size: 16px;
+}
+h4 {
+font-size: 14px;
+}
+h5 {
+font-size: 12px;
+}
+h6 {
+font-size: 11px;
+}
+blockquote {
+margin: 0;
+}
+ul,
+ol {
+padding: 0;
+margin-top: 0;
+margin-bottom: 0;
+}
+ol ol,
+ul ol {
+list-style-type: lower-roman;
+}
+ul ul ol,
+ul ol ol,
+ol ul ol,
+ol ol ol {
+list-style-type: lower-alpha;
+}
+dd {
+margin-left: 0;
+}
+code {
+font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+font-size: 12px;
+}
+pre {
+margin-top: 0;
+margin-bottom: 0;
+font: 12px Consolas, "Liberation Mono", Menlo, Courier, monospace;
+}
+.select::-ms-expand {
+opacity: 0;
+}
+.octicon {
+font: normal normal normal 16px/1 octicons-link;
+display: inline-block;
+text-decoration: none;
+text-rendering: auto;
+-webkit-font-smoothing: antialiased;
+-moz-osx-font-smoothing: grayscale;
+-webkit-user-select: none;
+-moz-user-select: none;
+-ms-user-select: none;
+user-select: none;
+}
+.octicon-link:before {
+content: '\f05c';
+}
+.markdown-body:before {
+display: table;
+content: "";
+}
+.markdown-body:after {
+display: table;
+clear: both;
+content: "";
+}
+.markdown-body>*:first-child {
+margin-top: 0 !important;
+}
+.markdown-body>*:last-child {
+margin-bottom: 0 !important;
+}
+a:not([href]) {
+color: inherit;
+text-decoration: none;
+}
+.anchor {
+display: inline-block;
+padding-right: 2px;
+margin-left: -18px;
+}
+.anchor:focus {
+outline: none;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+margin-top: 1em;
+margin-bottom: 16px;
+font-weight: bold;
+line-height: 1.4;
+}
+h1 .octicon-link,
+h2 .octicon-link,
+h3 .octicon-link,
+h4 .octicon-link,
+h5 .octicon-link,
+h6 .octicon-link {
+color: #000;
+vertical-align: middle;
+visibility: hidden;
+}
+h1:hover .anchor,
+h2:hover .anchor,
+h3:hover .anchor,
+h4:hover .anchor,
+h5:hover .anchor,
+h6:hover .anchor {
+text-decoration: none;
+}
+h1:hover .anchor .octicon-link,
+h2:hover .anchor .octicon-link,
+h3:hover .anchor .octicon-link,
+h4:hover .anchor .octicon-link,
+h5:hover .anchor .octicon-link,
+h6:hover .anchor .octicon-link {
+visibility: visible;
+}
+h1 {
+padding-bottom: 0.3em;
+font-size: 2.25em;
+line-height: 1.2;
+border-bottom: 1px solid #eee;
+}
+h1 .anchor {
+line-height: 1;
+}
+h2 {
+padding-bottom: 0.3em;
+font-size: 1.75em;
+line-height: 1.225;
+border-bottom: 1px solid #eee;
+}
+h2 .anchor {
+line-height: 1;
+}
+h3 {
+font-size: 1.5em;
+line-height: 1.43;
+}
+h3 .anchor {
+line-height: 1.2;
+}
+h4 {
+font-size: 1.25em;
+}
+h4 .anchor {
+line-height: 1.2;
+}
+h5 {
+font-size: 1em;
+}
+h5 .anchor {
+line-height: 1.1;
+}
+h6 {
+font-size: 1em;
+color: #777;
+}
+h6 .anchor {
+line-height: 1.1;
+}
+p,
+blockquote,
+ul,
+ol,
+dl,
+table,
+pre {
+margin-top: 0;
+margin-bottom: 16px;
+}
+hr {
+height: 4px;
+padding: 0;
+margin: 16px 0;
+background-color: #e7e7e7;
+border: 0 none;
+}
+ul,
+ol {
+padding-left: 2em;
+}
+ul ul,
+ul ol,
+ol ol,
+ol ul {
+margin-top: 0;
+margin-bottom: 0;
+}
+li>p {
+margin-top: 16px;
+}
+dl {
+padding: 0;
+}
+dl dt {
+padding: 0;
+margin-top: 16px;
+font-size: 1em;
+font-style: italic;
+font-weight: bold;
+}
+dl dd {
+padding: 0 16px;
+margin-bottom: 16px;
+}
+blockquote {
+padding: 0 15px;
+color: #777;
+border-left: 4px solid #ddd;
+}
+blockquote>:first-child {
+margin-top: 0;
+}
+blockquote>:last-child {
+margin-bottom: 0;
+}
+table {
+display: block;
+width: 100%;
+overflow: auto;
+word-break: normal;
+word-break: keep-all;
+}
+table th {
+font-weight: bold;
+}
+table th,
+table td {
+padding: 6px 13px;
+border: 1px solid #ddd;
+}
+table tr {
+background-color: #fff;
+border-top: 1px solid #ccc;
+}
+table tr:nth-child(2n) {
+background-color: #f8f8f8;
+}
+img {
+max-width: 100%;
+box-sizing: content-box;
+background-color: #fff;
+}
+code {
+padding: 0;
+padding-top: 0.2em;
+padding-bottom: 0.2em;
+margin: 0;
+font-size: 85%;
+background-color: rgba(0,0,0,0.04);
+border-radius: 3px;
+}
+code:before,
+code:after {
+letter-spacing: -0.2em;
+content: "\00a0";
+}
+pre>code {
+padding: 0;
+margin: 0;
+font-size: 100%;
+word-break: normal;
+white-space: pre;
+background: transparent;
+border: 0;
+}
+.highlight {
+margin-bottom: 16px;
+}
+.highlight pre,
+pre {
+padding: 16px;
+overflow: auto;
+font-size: 85%;
+line-height: 1.45;
+background-color: #f7f7f7;
+border-radius: 3px;
+}
+.highlight pre {
+margin-bottom: 0;
+word-break: normal;
+}
+pre {
+word-wrap: normal;
+}
+pre code {
+display: inline;
+max-width: initial;
+padding: 0;
+margin: 0;
+overflow: initial;
+line-height: inherit;
+word-wrap: normal;
+background-color: transparent;
+border: 0;
+}
+pre code:before,
+pre code:after {
+content: normal;
+}
+kbd {
+display: inline-block;
+padding: 3px 5px;
+font-size: 11px;
+line-height: 10px;
+color: #555;
+vertical-align: middle;
+background-color: #fcfcfc;
+border: solid 1px #ccc;
+border-bottom-color: #bbb;
+border-radius: 3px;
+box-shadow: inset 0 -1px 0 #bbb;
+}
+.pl-c {
+color: #969896;
+}
+.pl-c1,
+.pl-s .pl-v {
+color: #0086b3;
+}
+.pl-e,
+.pl-en {
+color: #795da3;
+}
+.pl-s .pl-s1,
+.pl-smi {
+color: #333;
+}
+.pl-ent {
+color: #63a35c;
+}
+.pl-k {
+color: #a71d5d;
+}
+.pl-pds,
+.pl-s,
+.pl-s .pl-pse .pl-s1,
+.pl-sr,
+.pl-sr .pl-cce,
+.pl-sr .pl-sra,
+.pl-sr .pl-sre {
+color: #183691;
+}
+.pl-v {
+color: #ed6a43;
+}
+.pl-id {
+color: #b52a1d;
+}
+.pl-ii {
+background-color: #b52a1d;
+color: #f8f8f8;
+}
+.pl-sr .pl-cce {
+color: #63a35c;
+font-weight: bold;
+}
+.pl-ml {
+color: #693a17;
+}
+.pl-mh,
+.pl-mh .pl-en,
+.pl-ms {
+color: #1d3e81;
+font-weight: bold;
+}
+.pl-mq {
+color: #008080;
+}
+.pl-mi {
+color: #333;
+font-style: italic;
+}
+.pl-mb {
+color: #333;
+font-weight: bold;
+}
+.pl-md {
+background-color: #ffecec;
+color: #bd2c00;
+}
+.pl-mi1 {
+background-color: #eaffea;
+color: #55a532;
+}
+.pl-mdr {
+color: #795da3;
+font-weight: bold;
+}
+.pl-mo {
+color: #1d3e81;
+}
+kbd {
+display: inline-block;
+padding: 3px 5px;
+font: 11px Consolas, "Liberation Mono", Menlo, Courier, monospace;
+line-height: 10px;
+color: #555;
+vertical-align: middle;
+background-color: #fcfcfc;
+border: solid 1px #ccc;
+border-bottom-color: #bbb;
+border-radius: 3px;
+box-shadow: inset 0 -1px 0 #bbb;
+}
+.task-list-item {
+list-style-type: none;
+}
+.task-list-item+.task-list-item {
+margin-top: 3px;
+}
+.task-list-item input {
+margin: 0 0.35em 0.25em -1.6em;
+vertical-align: middle;
+}
+:checked+.radio-label {
+z-index: 1;
+position: relative;
+border-color: #4078c0;
+}
+.sourceLine {
+display: inline-block;
+}
+code .kw { color: #000000; }
+code .dt { color: #ed6a43; }
+code .dv { color: #009999; }
+code .bn { color: #009999; }
+code .fl { color: #009999; }
+code .ch { color: #009999; }
+code .st { color: #183691; }
+code .co { color: #969896; }
+code .ot { color: #0086b3; }
+code .al { color: #a61717; }
+code .fu { color: #63a35c; }
+code .er { color: #a61717; background-color: #e3d2d2; }
+code .wa { color: #000000; }
+code .cn { color: #008080; }
+code .sc { color: #008080; }
+code .vs { color: #183691; }
+code .ss { color: #183691; }
+code .im { color: #000000; }
+code .va {color: #008080; }
+code .cf { color: #000000; }
+code .op { color: #000000; }
+code .bu { color: #000000; }
+code .ex { color: #000000; }
+code .pp { color: #999999; }
+code .at { color: #008080; }
+code .do { color: #969896; }
+code .an { color: #008080; }
+code .cv { color: #008080; }
+code .in { color: #008080; }
+</style>
+<style>
+body {
+  box-sizing: border-box;
+  min-width: 200px;
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 45px;
+  padding-top: 0px;
+}
+</style>
+
+</head>
+
+<body>
+
+<h1 id="project_2">Project_2</h1>
+<p>Taylor Ashby 10/16/2020</p>
+<h1 id="introduction">Introduction</h1>
+<p>For this analysis, our goal is to predict the daily count of bikes used from a Washington, D.C.-area bike sharing service. There are several variables included that we would expect to influence how many bikes are used. For this analysis, we will focus on the following variables: season, yr, mnth, workingday, weathersit, atemp, and windspeed. Descriptions of these variables can be found <a href="https://archive.ics.uci.edu/ml/datasets/Bike+Sharing+Dataset">here</a>.</p>
+<p>We will use two methods to model the <em>cnt</em> variable: regression tree and boosted tree model. A regression tree is a model that splits data into regions and makes a prediction based on the mean value within a given region. A boosted tree model is a way to enhance the prediction by growing trees sequentially by modeling the residuals of the previous tree.</p>
+<p>The first thing we need to is to read in the data. Here we will also drop the casual and registered variables, as they are classifications that are not relevant to our analysis of the total daily bike count. We will then filter to the weekday of interest.</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a><span class="co">#Read in bike share data</span></span>
+<span id="cb1-2"><a href="#cb1-2"></a>bike&lt;-<span class="kw">read_csv</span>(<span class="st">&quot;day.csv&quot;</span>)</span></code></pre></div>
+<pre><code>## Parsed with column specification:
+## cols(
+##   instant = col_double(),
+##   dteday = col_date(format = &quot;&quot;),
+##   season = col_double(),
+##   yr = col_double(),
+##   mnth = col_double(),
+##   holiday = col_double(),
+##   weekday = col_double(),
+##   workingday = col_double(),
+##   weathersit = col_double(),
+##   temp = col_double(),
+##   atemp = col_double(),
+##   hum = col_double(),
+##   windspeed = col_double(),
+##   casual = col_double(),
+##   registered = col_double(),
+##   cnt = col_double()
+## )
+</code></pre>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1"></a><span class="co">#Drop casual and registered variables, then filter to desired weekday</span></span>
+<span id="cb3-2"><a href="#cb3-2"></a>bike&lt;-<span class="kw">select</span>(bike,<span class="op">-</span>casual,<span class="op">-</span>registered) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">filter</span>(weekday<span class="op">==</span>params<span class="op">$</span>day)</span></code></pre></div>
+<p>Next we need to split the data into a training and test set.</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1"></a><span class="co">#Partition into training and test sets</span></span>
+<span id="cb4-2"><a href="#cb4-2"></a><span class="kw">set.seed</span>(<span class="dv">123</span>)</span>
+<span id="cb4-3"><a href="#cb4-3"></a>bikeIndex&lt;-<span class="kw">createDataPartition</span>(bike<span class="op">$</span>cnt,<span class="dt">p=</span><span class="fl">0.7</span>,<span class="dt">list=</span><span class="ot">FALSE</span>)</span>
+<span id="cb4-4"><a href="#cb4-4"></a>bikeTrain&lt;-bike[bikeIndex,]</span>
+<span id="cb4-5"><a href="#cb4-5"></a>bikeTest&lt;-bike[bikeIndex,]</span></code></pre></div>
+<p>Before we begin modeling the <em>cnt</em> variable, we should view summary statistics and plot some of the variables to better understand the data and their relationships with the variable of interest.</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1"></a><span class="co">#View summary statistics for training data</span></span>
+<span id="cb5-2"><a href="#cb5-2"></a><span class="kw">summary</span>(bikeTrain,<span class="dt">digits=</span><span class="dv">2</span>)</span></code></pre></div>
+<pre><code>##     instant        dteday               season          yr           mnth     
+##  Min.   : 15   Min.   :2011-01-15   Min.   :1.0   Min.   :0.0   Min.   : 1.0  
+##  1st Qu.:209   1st Qu.:2011-07-28   1st Qu.:2.0   1st Qu.:0.0   1st Qu.: 4.0  
+##  Median :368   Median :2012-01-03   Median :3.0   Median :0.5   Median : 7.0  
+##  Mean   :377   Mean   :2012-01-11   Mean   :2.6   Mean   :0.5   Mean   : 6.9  
+##  3rd Qu.:549   3rd Qu.:2012-07-01   3rd Qu.:4.0   3rd Qu.:1.0   3rd Qu.:10.0  
+##  Max.   :729   Max.   :2012-12-29   Max.   :4.0   Max.   :1.0   Max.   :12.0  
+##     holiday     weekday    workingday   weathersit       temp          atemp     
+##  Min.   :0   Min.   :6   Min.   :0    Min.   :1.0   Min.   :0.20   Min.   :0.21  
+##  1st Qu.:0   1st Qu.:6   1st Qu.:0    1st Qu.:1.0   1st Qu.:0.33   1st Qu.:0.33  
+##  Median :0   Median :6   Median :0    Median :1.0   Median :0.43   Median :0.43  
+##  Mean   :0   Mean   :6   Mean   :0    Mean   :1.4   Mean   :0.48   Mean   :0.46  
+##  3rd Qu.:0   3rd Qu.:6   3rd Qu.:0    3rd Qu.:2.0   3rd Qu.:0.66   3rd Qu.:0.61  
+##  Max.   :0   Max.   :6   Max.   :0    Max.   :3.0   Max.   :0.86   Max.   :0.80  
+##       hum         windspeed          cnt      
+##  Min.   :0.19   Min.   :0.045   Min.   : 627  
+##  1st Qu.:0.52   1st Qu.:0.153   1st Qu.:2737  
+##  Median :0.61   Median :0.191   Median :4618  
+##  Mean   :0.61   Mean   :0.201   Mean   :4526  
+##  3rd Qu.:0.72   3rd Qu.:0.235   3rd Qu.:6164  
+##  Max.   :0.91   Max.   :0.507   Max.   :8555
+</code></pre>
+<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1"></a><span class="co">#view the distribution of the variable of interest</span></span>
+<span id="cb7-2"><a href="#cb7-2"></a>g&lt;-<span class="kw">ggplot</span>(bikeTrain,<span class="kw">aes</span>(<span class="dt">x=</span>cnt,<span class="dt">y=</span>..density..))</span>
+<span id="cb7-3"><a href="#cb7-3"></a>g<span class="op">+</span><span class="kw">geom_histogram</span>()<span class="op">+</span><span class="kw">labs</span>(<span class="dt">title=</span><span class="st">&quot;Histogram of Bike Counts&quot;</span>)<span class="co">#how to fix y-axis %s</span></span></code></pre></div>
+<pre><code>## `stat_bin()` using `bins = 30`. Pick better value with `binwidth`.
+</code></pre>
+<p><img src="data:image/png;base64,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" /><!-- --></p>
+<div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1"></a><span class="co">#Create scatterplots for variables that are likely to be important predictors</span></span>
+<span id="cb9-2"><a href="#cb9-2"></a>g&lt;-<span class="kw">ggplot</span>(bikeTrain,<span class="kw">aes</span>(<span class="dt">y=</span>cnt,<span class="dt">fill=</span><span class="kw">as.factor</span>(workingday)))</span>
+<span id="cb9-3"><a href="#cb9-3"></a></span>
+<span id="cb9-4"><a href="#cb9-4"></a>g<span class="op">+</span><span class="kw">geom_boxplot</span>()<span class="op">+</span><span class="kw">ylab</span>(<span class="st">&quot;Bike Count&quot;</span>)<span class="op">+</span><span class="kw">xlab</span>(<span class="st">&quot;Is it a Working Day?&quot;</span>)<span class="op">+</span><span class="st"> </span></span>
+<span id="cb9-5"><a href="#cb9-5"></a><span class="st">  </span><span class="kw">labs</span>(<span class="dt">title=</span><span class="st">&quot;Relationship of workingday to cnt&quot;</span>) <span class="co">#why is x-axis -0.2 to 0.2?</span></span></code></pre></div>
+<p><img src="data:image/png;base64,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" /><!-- --></p>
+<div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1"></a>g&lt;-<span class="kw">ggplot</span>(bikeTrain,<span class="kw">aes</span>(<span class="dt">y=</span>cnt,<span class="dt">fill=</span><span class="kw">as.factor</span>(weathersit)))</span>
+<span id="cb10-2"><a href="#cb10-2"></a></span>
+<span id="cb10-3"><a href="#cb10-3"></a>g<span class="op">+</span><span class="kw">geom_boxplot</span>()<span class="op">+</span><span class="kw">ylab</span>(<span class="st">&quot;Bike Count&quot;</span>)<span class="op">+</span><span class="kw">xlab</span>(<span class="st">&quot;What is the weather like&quot;</span>)<span class="op">+</span><span class="st"> </span></span>
+<span id="cb10-4"><a href="#cb10-4"></a><span class="st">  </span><span class="kw">labs</span>(<span class="dt">title=</span><span class="st">&quot;Relationship of weathersit to cnt&quot;</span>) <span class="co">#why is x-axis -0.2 to 0.2?</span></span></code></pre></div>
+<p><img src="data:image/png;base64,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" /><!-- --></p>
+<div class="sourceCode" id="cb11"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1"></a>g&lt;-<span class="kw">ggplot</span>(bikeTrain,<span class="kw">aes</span>(<span class="dt">y=</span>cnt,<span class="dt">fill=</span><span class="kw">as.factor</span>(season)))</span>
+<span id="cb11-2"><a href="#cb11-2"></a></span>
+<span id="cb11-3"><a href="#cb11-3"></a>g<span class="op">+</span><span class="kw">geom_boxplot</span>()<span class="op">+</span><span class="kw">ylab</span>(<span class="st">&quot;Bike Count&quot;</span>)<span class="op">+</span><span class="kw">xlab</span>(<span class="st">&quot;What season is it?&quot;</span>)<span class="op">+</span><span class="st"> </span></span>
+<span id="cb11-4"><a href="#cb11-4"></a><span class="st">  </span><span class="kw">labs</span>(<span class="dt">title=</span><span class="st">&quot;Relationship of season to cnt&quot;</span>) <span class="co">#why is x-axis -0.2 to 0.2?</span></span></code></pre></div>
+<p><img src="data:image/png;base64,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" /><!-- --></p>
+<p>It looks like there are a few variables we will not need for modeling. It will be easier to work with if we simply remove those from the training data set.</p>
+<div class="sourceCode" id="cb12"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1"></a><span class="co">#first remove variables that are not applicable for prediction of cnt</span></span>
+<span id="cb12-2"><a href="#cb12-2"></a>bikeTrain&lt;-bikeTrain <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">select</span>(<span class="op">-</span>instant,<span class="op">-</span>dteday)</span>
+<span id="cb12-3"><a href="#cb12-3"></a></span>
+<span id="cb12-4"><a href="#cb12-4"></a><span class="co">#we can also remove variables where their information is captured by other variables</span></span>
+<span id="cb12-5"><a href="#cb12-5"></a><span class="co">#i.e., we do not need to include the weekday and workingday indicators since we are</span></span>
+<span id="cb12-6"><a href="#cb12-6"></a><span class="co">#going to create separate reports for each weekday.</span></span>
+<span id="cb12-7"><a href="#cb12-7"></a>bikeTrain&lt;-bikeTrain <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">select</span>(<span class="op">-</span>holiday,<span class="op">-</span>workingday,<span class="op">-</span>temp, <span class="op">-</span>hum)</span></code></pre></div>
+<p>Now we are ready to fit the models. First we will fit a tree model, which separates the data into regions and uses the mean of the a given region to predict the responses. Then we will try a boosted tree model. This approach grows many trees sequentially, modeling residuals as the responses. By aggregating over many trees, we lose some interpretability, but the predictions should be better.</p>
+<p>As we fit the models, we are also using “leave one out” cross-validation to determine the optimal values of the tuning parameters so that we can get the optimal model fit. The output will automatically use the bestTune values of these parameters when we go to make predictions.</p>
+<div class="sourceCode" id="cb13"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1"></a><span class="co">#now we are ready to fit the tree</span></span>
+<span id="cb13-2"><a href="#cb13-2"></a>train_control&lt;-<span class="kw">trainControl</span>(<span class="dt">method=</span><span class="st">&quot;LOOCV&quot;</span>)</span>
+<span id="cb13-3"><a href="#cb13-3"></a>treeFit&lt;-<span class="kw">train</span>(cnt <span class="op">~</span><span class="st"> </span>., <span class="dt">data=</span>bikeTrain, <span class="dt">method=</span><span class="st">&quot;rpart&quot;</span>, </span>
+<span id="cb13-4"><a href="#cb13-4"></a>               <span class="dt">preProcess=</span><span class="kw">c</span>(<span class="st">&quot;center&quot;</span>,<span class="st">&quot;scale&quot;</span>),</span>
+<span id="cb13-5"><a href="#cb13-5"></a>               <span class="dt">trControl=</span>train_control, </span>
+<span id="cb13-6"><a href="#cb13-6"></a>               <span class="dt">tuneGrid=</span><span class="ot">NULL</span>)</span></code></pre></div>
+<pre><code>## Warning in preProcess.default(thresh = 0.95, k = 5, freqCut = 19, uniqueCut = 10, :
+## These variables have zero variances: weekday
+
+## Warning in preProcess.default(thresh = 0.95, k = 5, freqCut = 19, uniqueCut = 10, :
+## These variables have zero variances: weekday
+
+## Warning in preProcess.default(thresh = 0.95, k = 5, freqCut = 19, uniqueCut = 10, :
+## These variables have zero variances: weekday
+
+## Warning in preProcess.default(thresh = 0.95, k = 5, freqCut = 19, uniqueCut = 10, :
+## These variables have zero variances: weekday
+
+## Warning in preProcess.default(thresh = 0.95, k = 5, freqCut = 19, uniqueCut = 10, :
+## These variables have zero variances: weekday
+
+## Warning in preProcess.default(thresh = 0.95, k = 5, freqCut = 19, uniqueCut = 10, :
+## These variables have zero variances: weekday
+
+## Warning in preProcess.default(thresh = 0.95, k = 5, freqCut = 19, uniqueCut = 10, :
+## These variables have zero variances: weekday
+
+## Warning in preProcess.default(thresh = 0.95, k = 5, freqCut = 19, uniqueCut = 10, :
+## These variables have zero variances: weekday
+
+## Warning in preProcess.default(thresh = 0.95, k = 5, freqCut = 19, uniqueCut = 10, :
+## These variables have zero variances: weekday
+
+## Warning in preProcess.default(thresh = 0.95, k = 5, freqCut = 19, uniqueCut = 10, :
+## These variables have zero variances: weekday
+
+## Warning in preProcess.default(thresh = 0.95, k = 5, freqCut = 19, uniqueCut = 10, :
+## These variables have zero variances: weekday
+
+## Warning in preProcess.default(thresh = 0.95, k = 5, freqCut = 19, uniqueCut = 10, :
+## These variables have zero variances: weekday
+
+## Warning in preProcess.default(thresh = 0.95, k = 5, freqCut = 19, uniqueCut = 10, :
+## These variables have zero variances: weekday
+
+## Warning in preProcess.default(thresh = 0.95, k = 5, freqCut = 19, uniqueCut = 10, :
+## These variables have zero variances: weekday
+
+## Warning in preProcess.default(thresh = 0.95, k = 5, freqCut = 19, uniqueCut = 10, :
+## These variables have zero variances: weekday
+
+## Warning in preProcess.default(thresh = 0.95, k = 5, freqCut = 19, uniqueCut = 10, :
+## These variables have zero variances: weekday
+
+## Warning in preProcess.default(thresh = 0.95, k = 5, freqCut = 19, uniqueCut = 10, :
+## These variables have zero variances: weekday
+
+## Warning in preProcess.default(thresh = 0.95, k = 5, freqCut = 19, uniqueCut = 10, :
+## These variables have zero variances: weekday
+
+## Warning in preProcess.default(thresh = 0.95, k = 5, freqCut = 19, uniqueCut = 10, :
+## These variables have zero variances: weekday
+
+## Warning in preProcess.default(thresh = 0.95, k = 5, freqCut = 19, uniqueCut = 10, :
+## These variables have zero variances: weekday
+
+## Warning in preProcess.default(thresh = 0.95, k = 5, freqCut = 19, uniqueCut = 10, :
+## These variables have zero variances: weekday
+
+## Warning in preProcess.default(thresh = 0.95, k = 5, freqCut = 19, uniqueCut = 10, :
+## These variables have zero variances: weekday
+
+## Warning in preProcess.default(thresh = 0.95, k = 5, freqCut = 19, uniqueCut = 10, :
+## These variables have zero variances: weekday
+
+## Warning in preProcess.default(thresh = 0.95, k = 5, freqCut = 19, uniqueCut = 10, :
+## These variables have zero variances: weekday
+
+## Warning in preProcess.default(thresh = 0.95, k = 5, freqCut = 19, uniqueCut = 10, :
+## These variables have zero variances: weekday
+
+## Warning in preProcess.default(thresh = 0.95, k = 5, freqCut = 19, uniqueCut = 10, :
+## These variables have zero variances: weekday
+
+## Warning in preProcess.default(thresh = 0.95, k = 5, freqCut = 19, uniqueCut = 10, :
+## These variables have zero variances: weekday
+
+## Warning in preProcess.default(thresh = 0.95, k = 5, freqCut = 19, uniqueCut = 10, :
+## These variables have zero variances: weekday
+
+## Warning in preProcess.default(thresh = 0.95, k = 5, freqCut = 19, uniqueCut = 10, :
+## These variables have zero variances: weekday
+
+## Warning in preProcess.default(thresh = 0.95, k = 5, freqCut = 19, uniqueCut = 10, :
+## These variables have zero variances: weekday
+
+## Warning in preProcess.default(thresh = 0.95, k = 5, freqCut = 19, uniqueCut = 10, :
+## These variables have zero variances: weekday
+
+## Warning in preProcess.default(thresh = 0.95, k = 5, freqCut = 19, uniqueCut = 10, :
+## These variables have zero variances: weekday
+
+## Warning in preProcess.default(thresh = 0.95, k = 5, freqCut = 19, uniqueCut = 10, :
+## These variables have zero variances: weekday
+
+## Warning in preProcess.default(thresh = 0.95, k = 5, freqCut = 19, uniqueCut = 10, :
+## These variables have zero variances: weekday
+
+## Warning in preProcess.default(thresh = 0.95, k = 5, freqCut = 19, uniqueCut = 10, :
+## These variables have zero variances: weekday
+
+## Warning in preProcess.default(thresh = 0.95, k = 5, freqCut = 19, uniqueCut = 10, :
+## These variables have zero variances: weekday
+
+## Warning in preProcess.default(thresh = 0.95, k = 5, freqCut = 19, uniqueCut = 10, :
+## These variables have zero variances: weekday
+
+## Warning in preProcess.default(thresh = 0.95, k = 5, freqCut = 19, uniqueCut = 10, :
+## These variables have zero variances: weekday
+
+## Warning in preProcess.default(thresh = 0.95, k = 5, freqCut = 19, uniqueCut = 10, :
+## These variables have zero variances: weekday
+
+## Warning in preProcess.default(thresh = 0.95, k = 5, freqCut = 19, uniqueCut = 10, :
+## These variables have zero variances: weekday
+
+## Warning in preProcess.default(thresh = 0.95, k = 5, freqCut = 19, uniqueCut = 10, :
+## These variables have zero variances: weekday
+
+## Warning in preProcess.default(thresh = 0.95, k = 5, freqCut = 19, uniqueCut = 10, :
+## These variables have zero variances: weekday
+
+## Warning in preProcess.default(thresh = 0.95, k = 5, freqCut = 19, uniqueCut = 10, :
+## These variables have zero variances: weekday
+
+## Warning in preProcess.default(thresh = 0.95, k = 5, freqCut = 19, uniqueCut = 10, :
+## These variables have zero variances: weekday
+
+## Warning in preProcess.default(thresh = 0.95, k = 5, freqCut = 19, uniqueCut = 10, :
+## These variables have zero variances: weekday
+
+## Warning in preProcess.default(thresh = 0.95, k = 5, freqCut = 19, uniqueCut = 10, :
+## These variables have zero variances: weekday
+
+## Warning in preProcess.default(thresh = 0.95, k = 5, freqCut = 19, uniqueCut = 10, :
+## These variables have zero variances: weekday
+
+## Warning in preProcess.default(thresh = 0.95, k = 5, freqCut = 19, uniqueCut = 10, :
+## These variables have zero variances: weekday
+
+## Warning in preProcess.default(thresh = 0.95, k = 5, freqCut = 19, uniqueCut = 10, :
+## These variables have zero variances: weekday
+
+## Warning in preProcess.default(thresh = 0.95, k = 5, freqCut = 19, uniqueCut = 10, :
+## These variables have zero variances: weekday
+
+## Warning in preProcess.default(thresh = 0.95, k = 5, freqCut = 19, uniqueCut = 10, :
+## These variables have zero variances: weekday
+
+## Warning in preProcess.default(thresh = 0.95, k = 5, freqCut = 19, uniqueCut = 10, :
+## These variables have zero variances: weekday
+
+## Warning in preProcess.default(thresh = 0.95, k = 5, freqCut = 19, uniqueCut = 10, :
+## These variables have zero variances: weekday
+
+## Warning in preProcess.default(thresh = 0.95, k = 5, freqCut = 19, uniqueCut = 10, :
+## These variables have zero variances: weekday
+
+## Warning in preProcess.default(thresh = 0.95, k = 5, freqCut = 19, uniqueCut = 10, :
+## These variables have zero variances: weekday
+
+## Warning in preProcess.default(thresh = 0.95, k = 5, freqCut = 19, uniqueCut = 10, :
+## These variables have zero variances: weekday
+
+## Warning in preProcess.default(thresh = 0.95, k = 5, freqCut = 19, uniqueCut = 10, :
+## These variables have zero variances: weekday
+
+## Warning in preProcess.default(thresh = 0.95, k = 5, freqCut = 19, uniqueCut = 10, :
+## These variables have zero variances: weekday
+
+## Warning in preProcess.default(thresh = 0.95, k = 5, freqCut = 19, uniqueCut = 10, :
+## These variables have zero variances: weekday
+
+## Warning in preProcess.default(thresh = 0.95, k = 5, freqCut = 19, uniqueCut = 10, :
+## These variables have zero variances: weekday
+
+## Warning in preProcess.default(thresh = 0.95, k = 5, freqCut = 19, uniqueCut = 10, :
+## These variables have zero variances: weekday
+
+## Warning in preProcess.default(thresh = 0.95, k = 5, freqCut = 19, uniqueCut = 10, :
+## These variables have zero variances: weekday
+
+## Warning in preProcess.default(thresh = 0.95, k = 5, freqCut = 19, uniqueCut = 10, :
+## These variables have zero variances: weekday
+
+## Warning in preProcess.default(thresh = 0.95, k = 5, freqCut = 19, uniqueCut = 10, :
+## These variables have zero variances: weekday
+
+## Warning in preProcess.default(thresh = 0.95, k = 5, freqCut = 19, uniqueCut = 10, :
+## These variables have zero variances: weekday
+
+## Warning in preProcess.default(thresh = 0.95, k = 5, freqCut = 19, uniqueCut = 10, :
+## These variables have zero variances: weekday
+
+## Warning in preProcess.default(thresh = 0.95, k = 5, freqCut = 19, uniqueCut = 10, :
+## These variables have zero variances: weekday
+
+## Warning in preProcess.default(thresh = 0.95, k = 5, freqCut = 19, uniqueCut = 10, :
+## These variables have zero variances: weekday
+
+## Warning in preProcess.default(thresh = 0.95, k = 5, freqCut = 19, uniqueCut = 10, :
+## These variables have zero variances: weekday
+
+## Warning in preProcess.default(thresh = 0.95, k = 5, freqCut = 19, uniqueCut = 10, :
+## These variables have zero variances: weekday
+
+## Warning in preProcess.default(thresh = 0.95, k = 5, freqCut = 19, uniqueCut = 10, :
+## These variables have zero variances: weekday
+
+## Warning in preProcess.default(thresh = 0.95, k = 5, freqCut = 19, uniqueCut = 10, :
+## These variables have zero variances: weekday
+
+## Warning in preProcess.default(thresh = 0.95, k = 5, freqCut = 19, uniqueCut = 10, :
+## These variables have zero variances: weekday
+
+## Warning in preProcess.default(thresh = 0.95, k = 5, freqCut = 19, uniqueCut = 10, :
+## These variables have zero variances: weekday
+
+## Warning in preProcess.default(thresh = 0.95, k = 5, freqCut = 19, uniqueCut = 10, :
+## These variables have zero variances: weekday
+
+## Warning in preProcess.default(thresh = 0.95, k = 5, freqCut = 19, uniqueCut = 10, :
+## These variables have zero variances: weekday
+
+## Warning in preProcess.default(thresh = 0.95, k = 5, freqCut = 19, uniqueCut = 10, :
+## These variables have zero variances: weekday
+</code></pre>
+<div class="sourceCode" id="cb15"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1"></a>treeFit<span class="op">$</span>results</span>
+<span id="cb15-2"><a href="#cb15-2"></a>treeFit<span class="op">$</span>bestTune</span>
+<span id="cb15-3"><a href="#cb15-3"></a></span>
+<span id="cb15-4"><a href="#cb15-4"></a><span class="co">#boosted tree model</span></span>
+<span id="cb15-5"><a href="#cb15-5"></a>boostFit&lt;-<span class="kw">train</span>(cnt <span class="op">~</span><span class="st"> </span>., <span class="dt">data=</span>bikeTrain, <span class="dt">method=</span><span class="st">&quot;gbm&quot;</span>, </span>
+<span id="cb15-6"><a href="#cb15-6"></a>                <span class="dt">preProcess=</span><span class="kw">c</span>(<span class="st">&quot;center&quot;</span>,<span class="st">&quot;scale&quot;</span>),</span>
+<span id="cb15-7"><a href="#cb15-7"></a>                <span class="dt">trControl=</span>train_control, </span>
+<span id="cb15-8"><a href="#cb15-8"></a>                <span class="dt">tuneGrid=</span><span class="ot">NULL</span>, <span class="dt">verbose=</span><span class="ot">FALSE</span>) <span class="co">#why does it produce all those different iterations, with no apparent variation?</span></span></code></pre></div>
+<pre><code>## Warning in preProcess.default(method = c(&quot;center&quot;, &quot;scale&quot;), x = structure(c(1, : These
+## variables have zero variances: weekday
+
+## Warning in preProcess.default(thresh = 0.95, k = 5, freqCut = 19, uniqueCut = 10, :
+## These variables have zero variances: weekday
+
+## Warning in (function (x, y, offset = NULL, misc = NULL, distribution = &quot;bernoulli&quot;, :
+## variable 4: weekday has no variation.
+
+## Warning in preProcess.default(thresh = 0.95, k = 5, freqCut = 19, uniqueCut = 10, :
+## These variables have zero variances: weekday
+
+## Warning in (function (x, y, offset = NULL, misc = NULL, distribution = &quot;bernoulli&quot;, :
+## variable 4: weekday has no variation.
+
+## Warning in preProcess.default(thresh = 0.95, k = 5, freqCut = 19, uniqueCut = 10, :
+## These variables have zero variances: weekday
+
+## Warning in (function (x, y, offset = NULL, misc = NULL, distribution = &quot;bernoulli&quot;, :
+## variable 4: weekday has no variation.
+
+## Warning in preProcess.default(thresh = 0.95, k = 5, freqCut = 19, uniqueCut = 10, :
+## These variables have zero variances: weekday
+
+## Warning in (function (x, y, offset = NULL, misc = NULL, distribution = &quot;bernoulli&quot;, :
+## variable 4: weekday has no variation.
+
+## Warning in preProcess.default(thresh = 0.95, k = 5, freqCut = 19, uniqueCut = 10, :
+## These variables have zero variances: weekday
+
+## Warning in (function (x, y, offset = NULL, misc = NULL, distribution = &quot;bernoulli&quot;, :
+## variable 4: weekday has no variation.
+
+## Warning in preProcess.default(thresh = 0.95, k = 5, freqCut = 19, uniqueCut = 10, :
+## These variables have zero variances: weekday
+
+## Warning in (function (x, y, offset = NULL, misc = NULL, distribution = &quot;bernoulli&quot;, :
+## variable 4: weekday has no variation.
+
+## Warning in preProcess.default(thresh = 0.95, k = 5, freqCut = 19, uniqueCut = 10, :
+## These variables have zero variances: weekday
+
+## Warning in (function (x, y, offset = NULL, misc = NULL, distribution = &quot;bernoulli&quot;, :
+## variable 4: weekday has no variation.
+
+## Warning in preProcess.default(thresh = 0.95, k = 5, freqCut = 19, uniqueCut = 10, :
+## These variables have zero variances: weekday
+
+## Warning in (function (x, y, offset = NULL, misc = NULL, distribution = &quot;bernoulli&quot;, :
+## variable 4: weekday has no variation.
+
+## Warning in preProcess.default(thresh = 0.95, k = 5, freqCut = 19, uniqueCut = 10, :
+## These variables have zero variances: weekday
+
+## Warning in (function (x, y, offset = NULL, misc = NULL, distribution = &quot;bernoulli&quot;, :
+## variable 4: weekday has no variation.
+
+## Warning in preProcess.default(thresh = 0.95, k = 5, freqCut = 19, uniqueCut = 10, :
+## These variables have zero variances: weekday
+
+## Warning in (function (x, y, offset = NULL, misc = NULL, distribution = &quot;bernoulli&quot;, :
+## variable 4: weekday has no variation.
+
+## Warning in preProcess.default(thresh = 0.95, k = 5, freqCut = 19, uniqueCut = 10, :
+## These variables have zero variances: weekday
+
+## Warning in (function (x, y, offset = NULL, misc = NULL, distribution = &quot;bernoulli&quot;, :
+## variable 4: weekday has no variation.
+
+## Warning in preProcess.default(thresh = 0.95, k = 5, freqCut = 19, uniqueCut = 10, :
+## These variables have zero variances: weekday
+
+## Warning in (function (x, y, offset = NULL, misc = NULL, distribution = &quot;bernoulli&quot;, :
+## variable 4: weekday has no variation.
+
+## Warning in preProcess.default(thresh = 0.95, k = 5, freqCut = 19, uniqueCut = 10, :
+## These variables have zero variances: weekday
+
+## Warning in (function (x, y, offset = NULL, misc = NULL, distribution = &quot;bernoulli&quot;, :
+## variable 4: weekday has no variation.
+
+## Warning in preProcess.default(thresh = 0.95, k = 5, freqCut = 19, uniqueCut = 10, :
+## These variables have zero variances: weekday
+
+## Warning in (function (x, y, offset = NULL, misc = NULL, distribution = &quot;bernoulli&quot;, :
+## variable 4: weekday has no variation.
+
+## Warning in preProcess.default(thresh = 0.95, k = 5, freqCut = 19, uniqueCut = 10, :
+## These variables have zero variances: weekday
+
+## Warning in (function (x, y, offset = NULL, misc = NULL, distribution = &quot;bernoulli&quot;, :
+## variable 4: weekday has no variation.
+
+## Warning in preProcess.default(thresh = 0.95, k = 5, freqCut = 19, uniqueCut = 10, :
+## These variables have zero variances: weekday
+
+## Warning in (function (x, y, offset = NULL, misc = NULL, distribution = &quot;bernoulli&quot;, :
+## variable 4: weekday has no variation.
+
+## Warning in preProcess.default(thresh = 0.95, k = 5, freqCut = 19, uniqueCut = 10, :
+## These variables have zero variances: weekday
+
+## Warning in (function (x, y, offset = NULL, misc = NULL, distribution = &quot;bernoulli&quot;, :
+## variable 4: weekday has no variation.
+
+## Warning in preProcess.default(thresh = 0.95, k = 5, freqCut = 19, uniqueCut = 10, :
+## These variables have zero variances: weekday
+
+## Warning in (function (x, y, offset = NULL, misc = NULL, distribution = &quot;bernoulli&quot;, :
+## variable 4: weekday has no variation.
+
+## Warning in preProcess.default(thresh = 0.95, k = 5, freqCut = 19, uniqueCut = 10, :
+## These variables have zero variances: weekday
+
+## Warning in (function (x, y, offset = NULL, misc = NULL, distribution = &quot;bernoulli&quot;, :
+## variable 4: weekday has no variation.
+
+## Warning in preProcess.default(thresh = 0.95, k = 5, freqCut = 19, uniqueCut = 10, :
+## These variables have zero variances: weekday
+
+## Warning in (function (x, y, offset = NULL, misc = NULL, distribution = &quot;bernoulli&quot;, :
+## variable 4: weekday has no variation.
+
+## Warning in preProcess.default(thresh = 0.95, k = 5, freqCut = 19, uniqueCut = 10, :
+## These variables have zero variances: weekday
+
+## Warning in (function (x, y, offset = NULL, misc = NULL, distribution = &quot;bernoulli&quot;, :
+## variable 4: weekday has no variation.
+
+## Warning in preProcess.default(thresh = 0.95, k = 5, freqCut = 19, uniqueCut = 10, :
+## These variables have zero variances: weekday
+
+## Warning in (function (x, y, offset = NULL, misc = NULL, distribution = &quot;bernoulli&quot;, :
+## variable 4: weekday has no variation.
+
+## Warning in preProcess.default(thresh = 0.95, k = 5, freqCut = 19, uniqueCut = 10, :
+## These variables have zero variances: weekday
+
+## Warning in (function (x, y, offset = NULL, misc = NULL, distribution = &quot;bernoulli&quot;, :
+## variable 4: weekday has no variation.
+
+## Warning in preProcess.default(thresh = 0.95, k = 5, freqCut = 19, uniqueCut = 10, :
+## These variables have zero variances: weekday
+
+## Warning in (function (x, y, offset = NULL, misc = NULL, distribution = &quot;bernoulli&quot;, :
+## variable 4: weekday has no variation.
+
+## Warning in preProcess.default(thresh = 0.95, k = 5, freqCut = 19, uniqueCut = 10, :
+## These variables have zero variances: weekday
+
+## Warning in (function (x, y, offset = NULL, misc = NULL, distribution = &quot;bernoulli&quot;, :
+## variable 4: weekday has no variation.
+
+## Warning in preProcess.default(thresh = 0.95, k = 5, freqCut = 19, uniqueCut = 10, :
+## These variables have zero variances: weekday
+
+## Warning in (function (x, y, offset = NULL, misc = NULL, distribution = &quot;bernoulli&quot;, :
+## variable 4: weekday has no variation.
+
+## Warning in preProcess.default(thresh = 0.95, k = 5, freqCut = 19, uniqueCut = 10, :
+## These variables have zero variances: weekday
+
+## Warning in (function (x, y, offset = NULL, misc = NULL, distribution = &quot;bernoulli&quot;, :
+## variable 4: weekday has no variation.
+
+## Warning in preProcess.default(thresh = 0.95, k = 5, freqCut = 19, uniqueCut = 10, :
+## These variables have zero variances: weekday
+
+## Warning in (function (x, y, offset = NULL, misc = NULL, distribution = &quot;bernoulli&quot;, :
+## variable 4: weekday has no variation.
+
+## Warning in preProcess.default(thresh = 0.95, k = 5, freqCut = 19, uniqueCut = 10, :
+## These variables have zero variances: weekday
+
+## Warning in (function (x, y, offset = NULL, misc = NULL, distribution = &quot;bernoulli&quot;, :
+## variable 4: weekday has no variation.
+
+## Warning in preProcess.default(thresh = 0.95, k = 5, freqCut = 19, uniqueCut = 10, :
+## These variables have zero variances: weekday
+
+## Warning in (function (x, y, offset = NULL, misc = NULL, distribution = &quot;bernoulli&quot;, :
+## variable 4: weekday has no variation.
+
+## Warning in preProcess.default(thresh = 0.95, k = 5, freqCut = 19, uniqueCut = 10, :
+## These variables have zero variances: weekday
+
+## Warning in (function (x, y, offset = NULL, misc = NULL, distribution = &quot;bernoulli&quot;, :
+## variable 4: weekday has no variation.
+
+## Warning in preProcess.default(thresh = 0.95, k = 5, freqCut = 19, uniqueCut = 10, :
+## These variables have zero variances: weekday
+
+## Warning in (function (x, y, offset = NULL, misc = NULL, distribution = &quot;bernoulli&quot;, :
+## variable 4: weekday has no variation.
+
+## Warning in preProcess.default(thresh = 0.95, k = 5, freqCut = 19, uniqueCut = 10, :
+## These variables have zero variances: weekday
+
+## Warning in (function (x, y, offset = NULL, misc = NULL, distribution = &quot;bernoulli&quot;, :
+## variable 4: weekday has no variation.
+
+## Warning in preProcess.default(thresh = 0.95, k = 5, freqCut = 19, uniqueCut = 10, :
+## These variables have zero variances: weekday
+
+## Warning in (function (x, y, offset = NULL, misc = NULL, distribution = &quot;bernoulli&quot;, :
+## variable 4: weekday has no variation.
+
+## Warning in preProcess.default(thresh = 0.95, k = 5, freqCut = 19, uniqueCut = 10, :
+## These variables have zero variances: weekday
+
+## Warning in (function (x, y, offset = NULL, misc = NULL, distribution = &quot;bernoulli&quot;, :
+## variable 4: weekday has no variation.
+
+## Warning in preProcess.default(thresh = 0.95, k = 5, freqCut = 19, uniqueCut = 10, :
+## These variables have zero variances: weekday
+
+## Warning in (function (x, y, offset = NULL, misc = NULL, distribution = &quot;bernoulli&quot;, :
+## variable 4: weekday has no variation.
+
+## Warning in preProcess.default(thresh = 0.95, k = 5, freqCut = 19, uniqueCut = 10, :
+## These variables have zero variances: weekday
+
+## Warning in (function (x, y, offset = NULL, misc = NULL, distribution = &quot;bernoulli&quot;, :
+## variable 4: weekday has no variation.
+
+## Warning in preProcess.default(thresh = 0.95, k = 5, freqCut = 19, uniqueCut = 10, :
+## These variables have zero variances: weekday
+
+## Warning in (function (x, y, offset = NULL, misc = NULL, distribution = &quot;bernoulli&quot;, :
+## variable 4: weekday has no variation.
+
+## Warning in preProcess.default(thresh = 0.95, k = 5, freqCut = 19, uniqueCut = 10, :
+## These variables have zero variances: weekday
+
+## Warning in (function (x, y, offset = NULL, misc = NULL, distribution = &quot;bernoulli&quot;, :
+## variable 4: weekday has no variation.
+
+## Warning in preProcess.default(thresh = 0.95, k = 5, freqCut = 19, uniqueCut = 10, :
+## These variables have zero variances: weekday
+
+## Warning in (function (x, y, offset = NULL, misc = NULL, distribution = &quot;bernoulli&quot;, :
+## variable 4: weekday has no variation.
+
+## Warning in preProcess.default(thresh = 0.95, k = 5, freqCut = 19, uniqueCut = 10, :
+## These variables have zero variances: weekday
+
+## Warning in (function (x, y, offset = NULL, misc = NULL, distribution = &quot;bernoulli&quot;, :
+## variable 4: weekday has no variation.
+
+## Warning in preProcess.default(thresh = 0.95, k = 5, freqCut = 19, uniqueCut = 10, :
+## These variables have zero variances: weekday
+
+## Warning in (function (x, y, offset = NULL, misc = NULL, distribution = &quot;bernoulli&quot;, :
+## variable 4: weekday has no variation.
+
+## Warning in preProcess.default(thresh = 0.95, k = 5, freqCut = 19, uniqueCut = 10, :
+## These variables have zero variances: weekday
+
+## Warning in (function (x, y, offset = NULL, misc = NULL, distribution = &quot;bernoulli&quot;, :
+## variable 4: weekday has no variation.
+
+## Warning in preProcess.default(thresh = 0.95, k = 5, freqCut = 19, uniqueCut = 10, :
+## These variables have zero variances: weekday
+
+## Warning in (function (x, y, offset = NULL, misc = NULL, distribution = &quot;bernoulli&quot;, :
+## variable 4: weekday has no variation.
+
+## Warning in preProcess.default(thresh = 0.95, k = 5, freqCut = 19, uniqueCut = 10, :
+## These variables have zero variances: weekday
+
+## Warning in (function (x, y, offset = NULL, misc = NULL, distribution = &quot;bernoulli&quot;, :
+## variable 4: weekday has no variation.
+
+## Warning in preProcess.default(thresh = 0.95, k = 5, freqCut = 19, uniqueCut = 10, :
+## These variables have zero variances: weekday
+
+## Warning in (function (x, y, offset = NULL, misc = NULL, distribution = &quot;bernoulli&quot;, :
+## variable 4: weekday has no variation.
+
+## Warning in preProcess.default(thresh = 0.95, k = 5, freqCut = 19, uniqueCut = 10, :
+## These variables have zero variances: weekday
+
+## Warning in (function (x, y, offset = NULL, misc = NULL, distribution = &quot;bernoulli&quot;, :
+## variable 4: weekday has no variation.
+
+## Warning in preProcess.default(thresh = 0.95, k = 5, freqCut = 19, uniqueCut = 10, :
+## These variables have zero variances: weekday
+
+## Warning in (function (x, y, offset = NULL, misc = NULL, distribution = &quot;bernoulli&quot;, :
+## variable 4: weekday has no variation.
+
+## Warning in preProcess.default(thresh = 0.95, k = 5, freqCut = 19, uniqueCut = 10, :
+## These variables have zero variances: weekday
+
+## Warning in (function (x, y, offset = NULL, misc = NULL, distribution = &quot;bernoulli&quot;, :
+## variable 4: weekday has no variation.
+
+## Warning in preProcess.default(thresh = 0.95, k = 5, freqCut = 19, uniqueCut = 10, :
+## These variables have zero variances: weekday
+
+## Warning in (function (x, y, offset = NULL, misc = NULL, distribution = &quot;bernoulli&quot;, :
+## variable 4: weekday has no variation.
+
+## Warning in preProcess.default(thresh = 0.95, k = 5, freqCut = 19, uniqueCut = 10, :
+## These variables have zero variances: weekday
+
+## Warning in (function (x, y, offset = NULL, misc = NULL, distribution = &quot;bernoulli&quot;, :
+## variable 4: weekday has no variation.
+
+## Warning in preProcess.default(thresh = 0.95, k = 5, freqCut = 19, uniqueCut = 10, :
+## These variables have zero variances: weekday
+
+## Warning in (function (x, y, offset = NULL, misc = NULL, distribution = &quot;bernoulli&quot;, :
+## variable 4: weekday has no variation.
+
+## Warning in preProcess.default(thresh = 0.95, k = 5, freqCut = 19, uniqueCut = 10, :
+## These variables have zero variances: weekday
+
+## Warning in (function (x, y, offset = NULL, misc = NULL, distribution = &quot;bernoulli&quot;, :
+## variable 4: weekday has no variation.
+
+## Warning in preProcess.default(thresh = 0.95, k = 5, freqCut = 19, uniqueCut = 10, :
+## These variables have zero variances: weekday
+
+## Warning in (function (x, y, offset = NULL, misc = NULL, distribution = &quot;bernoulli&quot;, :
+## variable 4: weekday has no variation.
+
+## Warning in preProcess.default(thresh = 0.95, k = 5, freqCut = 19, uniqueCut = 10, :
+## These variables have zero variances: weekday
+
+## Warning in (function (x, y, offset = NULL, misc = NULL, distribution = &quot;bernoulli&quot;, :
+## variable 4: weekday has no variation.
+
+## Warning in preProcess.default(thresh = 0.95, k = 5, freqCut = 19, uniqueCut = 10, :
+## These variables have zero variances: weekday
+
+## Warning in (function (x, y, offset = NULL, misc = NULL, distribution = &quot;bernoulli&quot;, :
+## variable 4: weekday has no variation.
+
+## Warning in preProcess.default(thresh = 0.95, k = 5, freqCut = 19, uniqueCut = 10, :
+## These variables have zero variances: weekday
+
+## Warning in (function (x, y, offset = NULL, misc = NULL, distribution = &quot;bernoulli&quot;, :
+## variable 4: weekday has no variation.
+
+## Warning in preProcess.default(thresh = 0.95, k = 5, freqCut = 19, uniqueCut = 10, :
+## These variables have zero variances: weekday
+
+## Warning in (function (x, y, offset = NULL, misc = NULL, distribution = &quot;bernoulli&quot;, :
+## variable 4: weekday has no variation.
+
+## Warning in preProcess.default(thresh = 0.95, k = 5, freqCut = 19, uniqueCut = 10, :
+## These variables have zero variances: weekday
+
+## Warning in (function (x, y, offset = NULL, misc = NULL, distribution = &quot;bernoulli&quot;, :
+## variable 4: weekday has no variation.
+
+## Warning in preProcess.default(thresh = 0.95, k = 5, freqCut = 19, uniqueCut = 10, :
+## These variables have zero variances: weekday
+
+## Warning in (function (x, y, offset = NULL, misc = NULL, distribution = &quot;bernoulli&quot;, :
+## variable 4: weekday has no variation.
+
+## Warning in preProcess.default(thresh = 0.95, k = 5, freqCut = 19, uniqueCut = 10, :
+## These variables have zero variances: weekday
+
+## Warning in (function (x, y, offset = NULL, misc = NULL, distribution = &quot;bernoulli&quot;, :
+## variable 4: weekday has no variation.
+
+## Warning in preProcess.default(thresh = 0.95, k = 5, freqCut = 19, uniqueCut = 10, :
+## These variables have zero variances: weekday
+
+## Warning in (function (x, y, offset = NULL, misc = NULL, distribution = &quot;bernoulli&quot;, :
+## variable 4: weekday has no variation.
+
+## Warning in preProcess.default(thresh = 0.95, k = 5, freqCut = 19, uniqueCut = 10, :
+## These variables have zero variances: weekday
+
+## Warning in (function (x, y, offset = NULL, misc = NULL, distribution = &quot;bernoulli&quot;, :
+## variable 4: weekday has no variation.
+
+## Warning in preProcess.default(thresh = 0.95, k = 5, freqCut = 19, uniqueCut = 10, :
+## These variables have zero variances: weekday
+
+## Warning in (function (x, y, offset = NULL, misc = NULL, distribution = &quot;bernoulli&quot;, :
+## variable 4: weekday has no variation.
+
+## Warning in preProcess.default(thresh = 0.95, k = 5, freqCut = 19, uniqueCut = 10, :
+## These variables have zero variances: weekday
+
+## Warning in (function (x, y, offset = NULL, misc = NULL, distribution = &quot;bernoulli&quot;, :
+## variable 4: weekday has no variation.
+
+## Warning in preProcess.default(thresh = 0.95, k = 5, freqCut = 19, uniqueCut = 10, :
+## These variables have zero variances: weekday
+
+## Warning in (function (x, y, offset = NULL, misc = NULL, distribution = &quot;bernoulli&quot;, :
+## variable 4: weekday has no variation.
+
+## Warning in preProcess.default(thresh = 0.95, k = 5, freqCut = 19, uniqueCut = 10, :
+## These variables have zero variances: weekday
+
+## Warning in (function (x, y, offset = NULL, misc = NULL, distribution = &quot;bernoulli&quot;, :
+## variable 4: weekday has no variation.
+
+## Warning in preProcess.default(thresh = 0.95, k = 5, freqCut = 19, uniqueCut = 10, :
+## These variables have zero variances: weekday
+
+## Warning in (function (x, y, offset = NULL, misc = NULL, distribution = &quot;bernoulli&quot;, :
+## variable 4: weekday has no variation.
+
+## Warning in preProcess.default(thresh = 0.95, k = 5, freqCut = 19, uniqueCut = 10, :
+## These variables have zero variances: weekday
+
+## Warning in (function (x, y, offset = NULL, misc = NULL, distribution = &quot;bernoulli&quot;, :
+## variable 4: weekday has no variation.
+
+## Warning in preProcess.default(thresh = 0.95, k = 5, freqCut = 19, uniqueCut = 10, :
+## These variables have zero variances: weekday
+
+## Warning in (function (x, y, offset = NULL, misc = NULL, distribution = &quot;bernoulli&quot;, :
+## variable 4: weekday has no variation.
+
+## Warning in preProcess.default(thresh = 0.95, k = 5, freqCut = 19, uniqueCut = 10, :
+## These variables have zero variances: weekday
+
+## Warning in (function (x, y, offset = NULL, misc = NULL, distribution = &quot;bernoulli&quot;, :
+## variable 4: weekday has no variation.
+
+## Warning in preProcess.default(thresh = 0.95, k = 5, freqCut = 19, uniqueCut = 10, :
+## These variables have zero variances: weekday
+
+## Warning in (function (x, y, offset = NULL, misc = NULL, distribution = &quot;bernoulli&quot;, :
+## variable 4: weekday has no variation.
+
+## Warning in preProcess.default(thresh = 0.95, k = 5, freqCut = 19, uniqueCut = 10, :
+## These variables have zero variances: weekday
+
+## Warning in (function (x, y, offset = NULL, misc = NULL, distribution = &quot;bernoulli&quot;, :
+## variable 4: weekday has no variation.
+
+## Warning in preProcess.default(thresh = 0.95, k = 5, freqCut = 19, uniqueCut = 10, :
+## These variables have zero variances: weekday
+
+## Warning in (function (x, y, offset = NULL, misc = NULL, distribution = &quot;bernoulli&quot;, :
+## variable 4: weekday has no variation.
+
+## Warning in preProcess.default(thresh = 0.95, k = 5, freqCut = 19, uniqueCut = 10, :
+## These variables have zero variances: weekday
+
+## Warning in (function (x, y, offset = NULL, misc = NULL, distribution = &quot;bernoulli&quot;, :
+## variable 4: weekday has no variation.
+
+## Warning in preProcess.default(thresh = 0.95, k = 5, freqCut = 19, uniqueCut = 10, :
+## These variables have zero variances: weekday
+
+## Warning in (function (x, y, offset = NULL, misc = NULL, distribution = &quot;bernoulli&quot;, :
+## variable 4: weekday has no variation.
+
+## Warning in preProcess.default(thresh = 0.95, k = 5, freqCut = 19, uniqueCut = 10, :
+## These variables have zero variances: weekday
+
+## Warning in (function (x, y, offset = NULL, misc = NULL, distribution = &quot;bernoulli&quot;, :
+## variable 4: weekday has no variation.
+
+## Warning in preProcess.default(thresh = 0.95, k = 5, freqCut = 19, uniqueCut = 10, :
+## These variables have zero variances: weekday
+
+## Warning in (function (x, y, offset = NULL, misc = NULL, distribution = &quot;bernoulli&quot;, :
+## variable 4: weekday has no variation.
+
+## Warning in preProcess.default(thresh = 0.95, k = 5, freqCut = 19, uniqueCut = 10, :
+## These variables have zero variances: weekday
+
+## Warning in (function (x, y, offset = NULL, misc = NULL, distribution = &quot;bernoulli&quot;, :
+## variable 4: weekday has no variation.
+
+## Warning in preProcess.default(thresh = 0.95, k = 5, freqCut = 19, uniqueCut = 10, :
+## These variables have zero variances: weekday
+
+## Warning in (function (x, y, offset = NULL, misc = NULL, distribution = &quot;bernoulli&quot;, :
+## variable 4: weekday has no variation.
+
+## Warning in preProcess.default(thresh = 0.95, k = 5, freqCut = 19, uniqueCut = 10, :
+## These variables have zero variances: weekday
+
+## Warning in (function (x, y, offset = NULL, misc = NULL, distribution = &quot;bernoulli&quot;, :
+## variable 4: weekday has no variation.
+
+## Warning in preProcess.default(thresh = 0.95, k = 5, freqCut = 19, uniqueCut = 10, :
+## These variables have zero variances: weekday
+
+## Warning in (function (x, y, offset = NULL, misc = NULL, distribution = &quot;bernoulli&quot;, :
+## variable 4: weekday has no variation.
+
+## Warning in preProcess.default(thresh = 0.95, k = 5, freqCut = 19, uniqueCut = 10, :
+## These variables have zero variances: weekday
+
+## Warning in (function (x, y, offset = NULL, misc = NULL, distribution = &quot;bernoulli&quot;, :
+## variable 4: weekday has no variation.
+
+## Warning in preProcess.default(thresh = 0.95, k = 5, freqCut = 19, uniqueCut = 10, :
+## These variables have zero variances: weekday
+
+## Warning in (function (x, y, offset = NULL, misc = NULL, distribution = &quot;bernoulli&quot;, :
+## variable 4: weekday has no variation.
+
+## Warning in preProcess.default(thresh = 0.95, k = 5, freqCut = 19, uniqueCut = 10, :
+## These variables have zero variances: weekday
+
+## Warning in (function (x, y, offset = NULL, misc = NULL, distribution = &quot;bernoulli&quot;, :
+## variable 4: weekday has no variation.
+
+## Warning in preProcess.default(thresh = 0.95, k = 5, freqCut = 19, uniqueCut = 10, :
+## These variables have zero variances: weekday
+
+## Warning in (function (x, y, offset = NULL, misc = NULL, distribution = &quot;bernoulli&quot;, :
+## variable 4: weekday has no variation.
+
+## Warning in preProcess.default(thresh = 0.95, k = 5, freqCut = 19, uniqueCut = 10, :
+## These variables have zero variances: weekday
+
+## Warning in (function (x, y, offset = NULL, misc = NULL, distribution = &quot;bernoulli&quot;, :
+## variable 4: weekday has no variation.
+
+## Warning in preProcess.default(thresh = 0.95, k = 5, freqCut = 19, uniqueCut = 10, :
+## These variables have zero variances: weekday
+
+## Warning in (function (x, y, offset = NULL, misc = NULL, distribution = &quot;bernoulli&quot;, :
+## variable 4: weekday has no variation.
+
+## Warning in preProcess.default(thresh = 0.95, k = 5, freqCut = 19, uniqueCut = 10, :
+## These variables have zero variances: weekday
+
+## Warning in (function (x, y, offset = NULL, misc = NULL, distribution = &quot;bernoulli&quot;, :
+## variable 4: weekday has no variation.
+
+## Warning in preProcess.default(thresh = 0.95, k = 5, freqCut = 19, uniqueCut = 10, :
+## These variables have zero variances: weekday
+
+## Warning in (function (x, y, offset = NULL, misc = NULL, distribution = &quot;bernoulli&quot;, :
+## variable 4: weekday has no variation.
+
+## Warning in preProcess.default(thresh = 0.95, k = 5, freqCut = 19, uniqueCut = 10, :
+## These variables have zero variances: weekday
+
+## Warning in (function (x, y, offset = NULL, misc = NULL, distribution = &quot;bernoulli&quot;, :
+## variable 4: weekday has no variation.
+
+## Warning in preProcess.default(thresh = 0.95, k = 5, freqCut = 19, uniqueCut = 10, :
+## These variables have zero variances: weekday
+
+## Warning in (function (x, y, offset = NULL, misc = NULL, distribution = &quot;bernoulli&quot;, :
+## variable 4: weekday has no variation.
+
+## Warning in preProcess.default(thresh = 0.95, k = 5, freqCut = 19, uniqueCut = 10, :
+## These variables have zero variances: weekday
+
+## Warning in (function (x, y, offset = NULL, misc = NULL, distribution = &quot;bernoulli&quot;, :
+## variable 4: weekday has no variation.
+
+## Warning in preProcess.default(thresh = 0.95, k = 5, freqCut = 19, uniqueCut = 10, :
+## These variables have zero variances: weekday
+
+## Warning in (function (x, y, offset = NULL, misc = NULL, distribution = &quot;bernoulli&quot;, :
+## variable 4: weekday has no variation.
+
+## Warning in preProcess.default(thresh = 0.95, k = 5, freqCut = 19, uniqueCut = 10, :
+## These variables have zero variances: weekday
+
+## Warning in (function (x, y, offset = NULL, misc = NULL, distribution = &quot;bernoulli&quot;, :
+## variable 4: weekday has no variation.
+
+## Warning in preProcess.default(thresh = 0.95, k = 5, freqCut = 19, uniqueCut = 10, :
+## These variables have zero variances: weekday
+
+## Warning in (function (x, y, offset = NULL, misc = NULL, distribution = &quot;bernoulli&quot;, :
+## variable 4: weekday has no variation.
+
+## Warning in preProcess.default(thresh = 0.95, k = 5, freqCut = 19, uniqueCut = 10, :
+## These variables have zero variances: weekday
+
+## Warning in (function (x, y, offset = NULL, misc = NULL, distribution = &quot;bernoulli&quot;, :
+## variable 4: weekday has no variation.
+
+## Warning in preProcess.default(thresh = 0.95, k = 5, freqCut = 19, uniqueCut = 10, :
+## These variables have zero variances: weekday
+
+## Warning in (function (x, y, offset = NULL, misc = NULL, distribution = &quot;bernoulli&quot;, :
+## variable 4: weekday has no variation.
+
+## Warning in preProcess.default(thresh = 0.95, k = 5, freqCut = 19, uniqueCut = 10, :
+## These variables have zero variances: weekday
+
+## Warning in (function (x, y, offset = NULL, misc = NULL, distribution = &quot;bernoulli&quot;, :
+## variable 4: weekday has no variation.
+
+## Warning in preProcess.default(thresh = 0.95, k = 5, freqCut = 19, uniqueCut = 10, :
+## These variables have zero variances: weekday
+
+## Warning in (function (x, y, offset = NULL, misc = NULL, distribution = &quot;bernoulli&quot;, :
+## variable 4: weekday has no variation.
+
+## Warning in preProcess.default(thresh = 0.95, k = 5, freqCut = 19, uniqueCut = 10, :
+## These variables have zero variances: weekday
+
+## Warning in (function (x, y, offset = NULL, misc = NULL, distribution = &quot;bernoulli&quot;, :
+## variable 4: weekday has no variation.
+
+## Warning in preProcess.default(thresh = 0.95, k = 5, freqCut = 19, uniqueCut = 10, :
+## These variables have zero variances: weekday
+
+## Warning in (function (x, y, offset = NULL, misc = NULL, distribution = &quot;bernoulli&quot;, :
+## variable 4: weekday has no variation.
+
+## Warning in preProcess.default(thresh = 0.95, k = 5, freqCut = 19, uniqueCut = 10, :
+## These variables have zero variances: weekday
+
+## Warning in (function (x, y, offset = NULL, misc = NULL, distribution = &quot;bernoulli&quot;, :
+## variable 4: weekday has no variation.
+
+## Warning in preProcess.default(thresh = 0.95, k = 5, freqCut = 19, uniqueCut = 10, :
+## These variables have zero variances: weekday
+
+## Warning in (function (x, y, offset = NULL, misc = NULL, distribution = &quot;bernoulli&quot;, :
+## variable 4: weekday has no variation.
+
+## Warning in preProcess.default(thresh = 0.95, k = 5, freqCut = 19, uniqueCut = 10, :
+## These variables have zero variances: weekday
+
+## Warning in (function (x, y, offset = NULL, misc = NULL, distribution = &quot;bernoulli&quot;, :
+## variable 4: weekday has no variation.
+
+## Warning in preProcess.default(thresh = 0.95, k = 5, freqCut = 19, uniqueCut = 10, :
+## These variables have zero variances: weekday
+
+## Warning in (function (x, y, offset = NULL, misc = NULL, distribution = &quot;bernoulli&quot;, :
+## variable 4: weekday has no variation.
+
+## Warning in preProcess.default(thresh = 0.95, k = 5, freqCut = 19, uniqueCut = 10, :
+## These variables have zero variances: weekday
+
+## Warning in (function (x, y, offset = NULL, misc = NULL, distribution = &quot;bernoulli&quot;, :
+## variable 4: weekday has no variation.
+
+## Warning in preProcess.default(thresh = 0.95, k = 5, freqCut = 19, uniqueCut = 10, :
+## These variables have zero variances: weekday
+
+## Warning in (function (x, y, offset = NULL, misc = NULL, distribution = &quot;bernoulli&quot;, :
+## variable 4: weekday has no variation.
+
+## Warning in preProcess.default(thresh = 0.95, k = 5, freqCut = 19, uniqueCut = 10, :
+## These variables have zero variances: weekday
+
+## Warning in (function (x, y, offset = NULL, misc = NULL, distribution = &quot;bernoulli&quot;, :
+## variable 4: weekday has no variation.
+
+## Warning in preProcess.default(thresh = 0.95, k = 5, freqCut = 19, uniqueCut = 10, :
+## These variables have zero variances: weekday
+
+## Warning in (function (x, y, offset = NULL, misc = NULL, distribution = &quot;bernoulli&quot;, :
+## variable 4: weekday has no variation.
+
+## Warning in preProcess.default(thresh = 0.95, k = 5, freqCut = 19, uniqueCut = 10, :
+## These variables have zero variances: weekday
+
+## Warning in (function (x, y, offset = NULL, misc = NULL, distribution = &quot;bernoulli&quot;, :
+## variable 4: weekday has no variation.
+
+## Warning in preProcess.default(thresh = 0.95, k = 5, freqCut = 19, uniqueCut = 10, :
+## These variables have zero variances: weekday
+
+## Warning in (function (x, y, offset = NULL, misc = NULL, distribution = &quot;bernoulli&quot;, :
+## variable 4: weekday has no variation.
+
+## Warning in preProcess.default(thresh = 0.95, k = 5, freqCut = 19, uniqueCut = 10, :
+## These variables have zero variances: weekday
+
+## Warning in (function (x, y, offset = NULL, misc = NULL, distribution = &quot;bernoulli&quot;, :
+## variable 4: weekday has no variation.
+
+## Warning in preProcess.default(thresh = 0.95, k = 5, freqCut = 19, uniqueCut = 10, :
+## These variables have zero variances: weekday
+
+## Warning in (function (x, y, offset = NULL, misc = NULL, distribution = &quot;bernoulli&quot;, :
+## variable 4: weekday has no variation.
+
+## Warning in preProcess.default(thresh = 0.95, k = 5, freqCut = 19, uniqueCut = 10, :
+## These variables have zero variances: weekday
+
+## Warning in (function (x, y, offset = NULL, misc = NULL, distribution = &quot;bernoulli&quot;, :
+## variable 4: weekday has no variation.
+
+## Warning in preProcess.default(thresh = 0.95, k = 5, freqCut = 19, uniqueCut = 10, :
+## These variables have zero variances: weekday
+
+## Warning in (function (x, y, offset = NULL, misc = NULL, distribution = &quot;bernoulli&quot;, :
+## variable 4: weekday has no variation.
+
+## Warning in preProcess.default(thresh = 0.95, k = 5, freqCut = 19, uniqueCut = 10, :
+## These variables have zero variances: weekday
+
+## Warning in (function (x, y, offset = NULL, misc = NULL, distribution = &quot;bernoulli&quot;, :
+## variable 4: weekday has no variation.
+
+## Warning in preProcess.default(thresh = 0.95, k = 5, freqCut = 19, uniqueCut = 10, :
+## These variables have zero variances: weekday
+
+## Warning in (function (x, y, offset = NULL, misc = NULL, distribution = &quot;bernoulli&quot;, :
+## variable 4: weekday has no variation.
+
+## Warning in preProcess.default(thresh = 0.95, k = 5, freqCut = 19, uniqueCut = 10, :
+## These variables have zero variances: weekday
+
+## Warning in (function (x, y, offset = NULL, misc = NULL, distribution = &quot;bernoulli&quot;, :
+## variable 4: weekday has no variation.
+
+## Warning in preProcess.default(thresh = 0.95, k = 5, freqCut = 19, uniqueCut = 10, :
+## These variables have zero variances: weekday
+
+## Warning in (function (x, y, offset = NULL, misc = NULL, distribution = &quot;bernoulli&quot;, :
+## variable 4: weekday has no variation.
+
+## Warning in preProcess.default(thresh = 0.95, k = 5, freqCut = 19, uniqueCut = 10, :
+## These variables have zero variances: weekday
+
+## Warning in (function (x, y, offset = NULL, misc = NULL, distribution = &quot;bernoulli&quot;, :
+## variable 4: weekday has no variation.
+
+## Warning in preProcess.default(thresh = 0.95, k = 5, freqCut = 19, uniqueCut = 10, :
+## These variables have zero variances: weekday
+
+## Warning in (function (x, y, offset = NULL, misc = NULL, distribution = &quot;bernoulli&quot;, :
+## variable 4: weekday has no variation.
+
+## Warning in preProcess.default(thresh = 0.95, k = 5, freqCut = 19, uniqueCut = 10, :
+## These variables have zero variances: weekday
+
+## Warning in (function (x, y, offset = NULL, misc = NULL, distribution = &quot;bernoulli&quot;, :
+## variable 4: weekday has no variation.
+
+## Warning in preProcess.default(thresh = 0.95, k = 5, freqCut = 19, uniqueCut = 10, :
+## These variables have zero variances: weekday
+
+## Warning in (function (x, y, offset = NULL, misc = NULL, distribution = &quot;bernoulli&quot;, :
+## variable 4: weekday has no variation.
+
+## Warning in preProcess.default(thresh = 0.95, k = 5, freqCut = 19, uniqueCut = 10, :
+## These variables have zero variances: weekday
+
+## Warning in (function (x, y, offset = NULL, misc = NULL, distribution = &quot;bernoulli&quot;, :
+## variable 4: weekday has no variation.
+
+## Warning in preProcess.default(thresh = 0.95, k = 5, freqCut = 19, uniqueCut = 10, :
+## These variables have zero variances: weekday
+
+## Warning in (function (x, y, offset = NULL, misc = NULL, distribution = &quot;bernoulli&quot;, :
+## variable 4: weekday has no variation.
+
+## Warning in preProcess.default(thresh = 0.95, k = 5, freqCut = 19, uniqueCut = 10, :
+## These variables have zero variances: weekday
+
+## Warning in (function (x, y, offset = NULL, misc = NULL, distribution = &quot;bernoulli&quot;, :
+## variable 4: weekday has no variation.
+
+## Warning in preProcess.default(thresh = 0.95, k = 5, freqCut = 19, uniqueCut = 10, :
+## These variables have zero variances: weekday
+
+## Warning in (function (x, y, offset = NULL, misc = NULL, distribution = &quot;bernoulli&quot;, :
+## variable 4: weekday has no variation.
+
+## Warning in preProcess.default(thresh = 0.95, k = 5, freqCut = 19, uniqueCut = 10, :
+## These variables have zero variances: weekday
+
+## Warning in (function (x, y, offset = NULL, misc = NULL, distribution = &quot;bernoulli&quot;, :
+## variable 4: weekday has no variation.
+
+## Warning in preProcess.default(thresh = 0.95, k = 5, freqCut = 19, uniqueCut = 10, :
+## These variables have zero variances: weekday
+
+## Warning in (function (x, y, offset = NULL, misc = NULL, distribution = &quot;bernoulli&quot;, :
+## variable 4: weekday has no variation.
+
+## Warning in preProcess.default(thresh = 0.95, k = 5, freqCut = 19, uniqueCut = 10, :
+## These variables have zero variances: weekday
+
+## Warning in (function (x, y, offset = NULL, misc = NULL, distribution = &quot;bernoulli&quot;, :
+## variable 4: weekday has no variation.
+
+## Warning in preProcess.default(thresh = 0.95, k = 5, freqCut = 19, uniqueCut = 10, :
+## These variables have zero variances: weekday
+
+## Warning in (function (x, y, offset = NULL, misc = NULL, distribution = &quot;bernoulli&quot;, :
+## variable 4: weekday has no variation.
+
+## Warning in preProcess.default(thresh = 0.95, k = 5, freqCut = 19, uniqueCut = 10, :
+## These variables have zero variances: weekday
+
+## Warning in (function (x, y, offset = NULL, misc = NULL, distribution = &quot;bernoulli&quot;, :
+## variable 4: weekday has no variation.
+
+## Warning in preProcess.default(thresh = 0.95, k = 5, freqCut = 19, uniqueCut = 10, :
+## These variables have zero variances: weekday
+
+## Warning in (function (x, y, offset = NULL, misc = NULL, distribution = &quot;bernoulli&quot;, :
+## variable 4: weekday has no variation.
+
+## Warning in preProcess.default(thresh = 0.95, k = 5, freqCut = 19, uniqueCut = 10, :
+## These variables have zero variances: weekday
+
+## Warning in (function (x, y, offset = NULL, misc = NULL, distribution = &quot;bernoulli&quot;, :
+## variable 4: weekday has no variation.
+
+## Warning in preProcess.default(thresh = 0.95, k = 5, freqCut = 19, uniqueCut = 10, :
+## These variables have zero variances: weekday
+
+## Warning in (function (x, y, offset = NULL, misc = NULL, distribution = &quot;bernoulli&quot;, :
+## variable 4: weekday has no variation.
+
+## Warning in preProcess.default(thresh = 0.95, k = 5, freqCut = 19, uniqueCut = 10, :
+## These variables have zero variances: weekday
+
+## Warning in (function (x, y, offset = NULL, misc = NULL, distribution = &quot;bernoulli&quot;, :
+## variable 4: weekday has no variation.
+
+## Warning in preProcess.default(thresh = 0.95, k = 5, freqCut = 19, uniqueCut = 10, :
+## These variables have zero variances: weekday
+
+## Warning in (function (x, y, offset = NULL, misc = NULL, distribution = &quot;bernoulli&quot;, :
+## variable 4: weekday has no variation.
+
+## Warning in preProcess.default(thresh = 0.95, k = 5, freqCut = 19, uniqueCut = 10, :
+## These variables have zero variances: weekday
+
+## Warning in (function (x, y, offset = NULL, misc = NULL, distribution = &quot;bernoulli&quot;, :
+## variable 4: weekday has no variation.
+
+## Warning in preProcess.default(thresh = 0.95, k = 5, freqCut = 19, uniqueCut = 10, :
+## These variables have zero variances: weekday
+
+## Warning in (function (x, y, offset = NULL, misc = NULL, distribution = &quot;bernoulli&quot;, :
+## variable 4: weekday has no variation.
+
+## Warning in preProcess.default(thresh = 0.95, k = 5, freqCut = 19, uniqueCut = 10, :
+## These variables have zero variances: weekday
+
+## Warning in (function (x, y, offset = NULL, misc = NULL, distribution = &quot;bernoulli&quot;, :
+## variable 4: weekday has no variation.
+
+## Warning in preProcess.default(thresh = 0.95, k = 5, freqCut = 19, uniqueCut = 10, :
+## These variables have zero variances: weekday
+
+## Warning in (function (x, y, offset = NULL, misc = NULL, distribution = &quot;bernoulli&quot;, :
+## variable 4: weekday has no variation.
+
+## Warning in preProcess.default(thresh = 0.95, k = 5, freqCut = 19, uniqueCut = 10, :
+## These variables have zero variances: weekday
+
+## Warning in (function (x, y, offset = NULL, misc = NULL, distribution = &quot;bernoulli&quot;, :
+## variable 4: weekday has no variation.
+
+## Warning in preProcess.default(thresh = 0.95, k = 5, freqCut = 19, uniqueCut = 10, :
+## These variables have zero variances: weekday
+
+## Warning in (function (x, y, offset = NULL, misc = NULL, distribution = &quot;bernoulli&quot;, :
+## variable 4: weekday has no variation.
+
+## Warning in preProcess.default(thresh = 0.95, k = 5, freqCut = 19, uniqueCut = 10, :
+## These variables have zero variances: weekday
+
+## Warning in (function (x, y, offset = NULL, misc = NULL, distribution = &quot;bernoulli&quot;, :
+## variable 4: weekday has no variation.
+
+## Warning in preProcess.default(thresh = 0.95, k = 5, freqCut = 19, uniqueCut = 10, :
+## These variables have zero variances: weekday
+
+## Warning in (function (x, y, offset = NULL, misc = NULL, distribution = &quot;bernoulli&quot;, :
+## variable 4: weekday has no variation.
+
+## Warning in preProcess.default(thresh = 0.95, k = 5, freqCut = 19, uniqueCut = 10, :
+## These variables have zero variances: weekday
+
+## Warning in (function (x, y, offset = NULL, misc = NULL, distribution = &quot;bernoulli&quot;, :
+## variable 4: weekday has no variation.
+
+## Warning in preProcess.default(thresh = 0.95, k = 5, freqCut = 19, uniqueCut = 10, :
+## These variables have zero variances: weekday
+
+## Warning in (function (x, y, offset = NULL, misc = NULL, distribution = &quot;bernoulli&quot;, :
+## variable 4: weekday has no variation.
+
+## Warning in preProcess.default(thresh = 0.95, k = 5, freqCut = 19, uniqueCut = 10, :
+## These variables have zero variances: weekday
+
+## Warning in (function (x, y, offset = NULL, misc = NULL, distribution = &quot;bernoulli&quot;, :
+## variable 4: weekday has no variation.
+
+## Warning in preProcess.default(thresh = 0.95, k = 5, freqCut = 19, uniqueCut = 10, :
+## These variables have zero variances: weekday
+
+## Warning in (function (x, y, offset = NULL, misc = NULL, distribution = &quot;bernoulli&quot;, :
+## variable 4: weekday has no variation.
+
+## Warning in preProcess.default(thresh = 0.95, k = 5, freqCut = 19, uniqueCut = 10, :
+## These variables have zero variances: weekday
+
+## Warning in (function (x, y, offset = NULL, misc = NULL, distribution = &quot;bernoulli&quot;, :
+## variable 4: weekday has no variation.
+
+## Warning in preProcess.default(thresh = 0.95, k = 5, freqCut = 19, uniqueCut = 10, :
+## These variables have zero variances: weekday
+
+## Warning in (function (x, y, offset = NULL, misc = NULL, distribution = &quot;bernoulli&quot;, :
+## variable 4: weekday has no variation.
+
+## Warning in preProcess.default(thresh = 0.95, k = 5, freqCut = 19, uniqueCut = 10, :
+## These variables have zero variances: weekday
+
+## Warning in (function (x, y, offset = NULL, misc = NULL, distribution = &quot;bernoulli&quot;, :
+## variable 4: weekday has no variation.
+
+## Warning in preProcess.default(thresh = 0.95, k = 5, freqCut = 19, uniqueCut = 10, :
+## These variables have zero variances: weekday
+
+## Warning in (function (x, y, offset = NULL, misc = NULL, distribution = &quot;bernoulli&quot;, :
+## variable 4: weekday has no variation.
+
+## Warning in preProcess.default(thresh = 0.95, k = 5, freqCut = 19, uniqueCut = 10, :
+## These variables have zero variances: weekday
+
+## Warning in (function (x, y, offset = NULL, misc = NULL, distribution = &quot;bernoulli&quot;, :
+## variable 4: weekday has no variation.
+
+## Warning in preProcess.default(thresh = 0.95, k = 5, freqCut = 19, uniqueCut = 10, :
+## These variables have zero variances: weekday
+
+## Warning in (function (x, y, offset = NULL, misc = NULL, distribution = &quot;bernoulli&quot;, :
+## variable 4: weekday has no variation.
+
+## Warning in preProcess.default(thresh = 0.95, k = 5, freqCut = 19, uniqueCut = 10, :
+## These variables have zero variances: weekday
+
+## Warning in (function (x, y, offset = NULL, misc = NULL, distribution = &quot;bernoulli&quot;, :
+## variable 4: weekday has no variation.
+
+## Warning in preProcess.default(thresh = 0.95, k = 5, freqCut = 19, uniqueCut = 10, :
+## These variables have zero variances: weekday
+
+## Warning in (function (x, y, offset = NULL, misc = NULL, distribution = &quot;bernoulli&quot;, :
+## variable 4: weekday has no variation.
+
+## Warning in preProcess.default(thresh = 0.95, k = 5, freqCut = 19, uniqueCut = 10, :
+## These variables have zero variances: weekday
+
+## Warning in (function (x, y, offset = NULL, misc = NULL, distribution = &quot;bernoulli&quot;, :
+## variable 4: weekday has no variation.
+
+## Warning in preProcess.default(thresh = 0.95, k = 5, freqCut = 19, uniqueCut = 10, :
+## These variables have zero variances: weekday
+
+## Warning in (function (x, y, offset = NULL, misc = NULL, distribution = &quot;bernoulli&quot;, :
+## variable 4: weekday has no variation.
+
+## Warning in preProcess.default(thresh = 0.95, k = 5, freqCut = 19, uniqueCut = 10, :
+## These variables have zero variances: weekday
+
+## Warning in (function (x, y, offset = NULL, misc = NULL, distribution = &quot;bernoulli&quot;, :
+## variable 4: weekday has no variation.
+
+## Warning in preProcess.default(thresh = 0.95, k = 5, freqCut = 19, uniqueCut = 10, :
+## These variables have zero variances: weekday
+
+## Warning in (function (x, y, offset = NULL, misc = NULL, distribution = &quot;bernoulli&quot;, :
+## variable 4: weekday has no variation.
+
+## Warning in preProcess.default(thresh = 0.95, k = 5, freqCut = 19, uniqueCut = 10, :
+## These variables have zero variances: weekday
+
+## Warning in (function (x, y, offset = NULL, misc = NULL, distribution = &quot;bernoulli&quot;, :
+## variable 4: weekday has no variation.
+
+## Warning in preProcess.default(thresh = 0.95, k = 5, freqCut = 19, uniqueCut = 10, :
+## These variables have zero variances: weekday
+
+## Warning in (function (x, y, offset = NULL, misc = NULL, distribution = &quot;bernoulli&quot;, :
+## variable 4: weekday has no variation.
+
+## Warning in preProcess.default(thresh = 0.95, k = 5, freqCut = 19, uniqueCut = 10, :
+## These variables have zero variances: weekday
+
+## Warning in (function (x, y, offset = NULL, misc = NULL, distribution = &quot;bernoulli&quot;, :
+## variable 4: weekday has no variation.
+
+## Warning in preProcess.default(thresh = 0.95, k = 5, freqCut = 19, uniqueCut = 10, :
+## These variables have zero variances: weekday
+
+## Warning in (function (x, y, offset = NULL, misc = NULL, distribution = &quot;bernoulli&quot;, :
+## variable 4: weekday has no variation.
+
+## Warning in preProcess.default(thresh = 0.95, k = 5, freqCut = 19, uniqueCut = 10, :
+## These variables have zero variances: weekday
+
+## Warning in (function (x, y, offset = NULL, misc = NULL, distribution = &quot;bernoulli&quot;, :
+## variable 4: weekday has no variation.
+
+## Warning in preProcess.default(thresh = 0.95, k = 5, freqCut = 19, uniqueCut = 10, :
+## These variables have zero variances: weekday
+
+## Warning in (function (x, y, offset = NULL, misc = NULL, distribution = &quot;bernoulli&quot;, :
+## variable 4: weekday has no variation.
+
+## Warning in preProcess.default(thresh = 0.95, k = 5, freqCut = 19, uniqueCut = 10, :
+## These variables have zero variances: weekday
+
+## Warning in (function (x, y, offset = NULL, misc = NULL, distribution = &quot;bernoulli&quot;, :
+## variable 4: weekday has no variation.
+
+## Warning in preProcess.default(thresh = 0.95, k = 5, freqCut = 19, uniqueCut = 10, :
+## These variables have zero variances: weekday
+
+## Warning in (function (x, y, offset = NULL, misc = NULL, distribution = &quot;bernoulli&quot;, :
+## variable 4: weekday has no variation.
+
+## Warning in preProcess.default(thresh = 0.95, k = 5, freqCut = 19, uniqueCut = 10, :
+## These variables have zero variances: weekday
+
+## Warning in (function (x, y, offset = NULL, misc = NULL, distribution = &quot;bernoulli&quot;, :
+## variable 4: weekday has no variation.
+
+## Warning in preProcess.default(thresh = 0.95, k = 5, freqCut = 19, uniqueCut = 10, :
+## These variables have zero variances: weekday
+
+## Warning in (function (x, y, offset = NULL, misc = NULL, distribution = &quot;bernoulli&quot;, :
+## variable 4: weekday has no variation.
+
+## Warning in preProcess.default(thresh = 0.95, k = 5, freqCut = 19, uniqueCut = 10, :
+## These variables have zero variances: weekday
+
+## Warning in (function (x, y, offset = NULL, misc = NULL, distribution = &quot;bernoulli&quot;, :
+## variable 4: weekday has no variation.
+
+## Warning in preProcess.default(thresh = 0.95, k = 5, freqCut = 19, uniqueCut = 10, :
+## These variables have zero variances: weekday
+
+## Warning in (function (x, y, offset = NULL, misc = NULL, distribution = &quot;bernoulli&quot;, :
+## variable 4: weekday has no variation.
+
+## Warning in preProcess.default(thresh = 0.95, k = 5, freqCut = 19, uniqueCut = 10, :
+## These variables have zero variances: weekday
+
+## Warning in (function (x, y, offset = NULL, misc = NULL, distribution = &quot;bernoulli&quot;, :
+## variable 4: weekday has no variation.
+
+## Warning in preProcess.default(thresh = 0.95, k = 5, freqCut = 19, uniqueCut = 10, :
+## These variables have zero variances: weekday
+
+## Warning in (function (x, y, offset = NULL, misc = NULL, distribution = &quot;bernoulli&quot;, :
+## variable 4: weekday has no variation.
+
+## Warning in preProcess.default(thresh = 0.95, k = 5, freqCut = 19, uniqueCut = 10, :
+## These variables have zero variances: weekday
+
+## Warning in (function (x, y, offset = NULL, misc = NULL, distribution = &quot;bernoulli&quot;, :
+## variable 4: weekday has no variation.
+
+## Warning in preProcess.default(thresh = 0.95, k = 5, freqCut = 19, uniqueCut = 10, :
+## These variables have zero variances: weekday
+
+## Warning in (function (x, y, offset = NULL, misc = NULL, distribution = &quot;bernoulli&quot;, :
+## variable 4: weekday has no variation.
+
+## Warning in preProcess.default(thresh = 0.95, k = 5, freqCut = 19, uniqueCut = 10, :
+## These variables have zero variances: weekday
+
+## Warning in (function (x, y, offset = NULL, misc = NULL, distribution = &quot;bernoulli&quot;, :
+## variable 4: weekday has no variation.
+
+## Warning in preProcess.default(thresh = 0.95, k = 5, freqCut = 19, uniqueCut = 10, :
+## These variables have zero variances: weekday
+
+## Warning in (function (x, y, offset = NULL, misc = NULL, distribution = &quot;bernoulli&quot;, :
+## variable 4: weekday has no variation.
+
+## Warning in preProcess.default(thresh = 0.95, k = 5, freqCut = 19, uniqueCut = 10, :
+## These variables have zero variances: weekday
+
+## Warning in (function (x, y, offset = NULL, misc = NULL, distribution = &quot;bernoulli&quot;, :
+## variable 4: weekday has no variation.
+
+## Warning in preProcess.default(thresh = 0.95, k = 5, freqCut = 19, uniqueCut = 10, :
+## These variables have zero variances: weekday
+
+## Warning in (function (x, y, offset = NULL, misc = NULL, distribution = &quot;bernoulli&quot;, :
+## variable 4: weekday has no variation.
+
+## Warning in preProcess.default(thresh = 0.95, k = 5, freqCut = 19, uniqueCut = 10, :
+## These variables have zero variances: weekday
+
+## Warning in (function (x, y, offset = NULL, misc = NULL, distribution = &quot;bernoulli&quot;, :
+## variable 4: weekday has no variation.
+
+## Warning in preProcess.default(thresh = 0.95, k = 5, freqCut = 19, uniqueCut = 10, :
+## These variables have zero variances: weekday
+
+## Warning in (function (x, y, offset = NULL, misc = NULL, distribution = &quot;bernoulli&quot;, :
+## variable 4: weekday has no variation.
+
+## Warning in preProcess.default(thresh = 0.95, k = 5, freqCut = 19, uniqueCut = 10, :
+## These variables have zero variances: weekday
+
+## Warning in (function (x, y, offset = NULL, misc = NULL, distribution = &quot;bernoulli&quot;, :
+## variable 4: weekday has no variation.
+
+## Warning in preProcess.default(thresh = 0.95, k = 5, freqCut = 19, uniqueCut = 10, :
+## These variables have zero variances: weekday
+
+## Warning in (function (x, y, offset = NULL, misc = NULL, distribution = &quot;bernoulli&quot;, :
+## variable 4: weekday has no variation.
+
+## Warning in preProcess.default(thresh = 0.95, k = 5, freqCut = 19, uniqueCut = 10, :
+## These variables have zero variances: weekday
+
+## Warning in (function (x, y, offset = NULL, misc = NULL, distribution = &quot;bernoulli&quot;, :
+## variable 4: weekday has no variation.
+
+## Warning in preProcess.default(thresh = 0.95, k = 5, freqCut = 19, uniqueCut = 10, :
+## These variables have zero variances: weekday
+
+## Warning in (function (x, y, offset = NULL, misc = NULL, distribution = &quot;bernoulli&quot;, :
+## variable 4: weekday has no variation.
+
+## Warning in preProcess.default(thresh = 0.95, k = 5, freqCut = 19, uniqueCut = 10, :
+## These variables have zero variances: weekday
+
+## Warning in (function (x, y, offset = NULL, misc = NULL, distribution = &quot;bernoulli&quot;, :
+## variable 4: weekday has no variation.
+
+## Warning in preProcess.default(thresh = 0.95, k = 5, freqCut = 19, uniqueCut = 10, :
+## These variables have zero variances: weekday
+
+## Warning in (function (x, y, offset = NULL, misc = NULL, distribution = &quot;bernoulli&quot;, :
+## variable 4: weekday has no variation.
+
+## Warning in preProcess.default(thresh = 0.95, k = 5, freqCut = 19, uniqueCut = 10, :
+## These variables have zero variances: weekday
+
+## Warning in (function (x, y, offset = NULL, misc = NULL, distribution = &quot;bernoulli&quot;, :
+## variable 4: weekday has no variation.
+
+## Warning in preProcess.default(thresh = 0.95, k = 5, freqCut = 19, uniqueCut = 10, :
+## These variables have zero variances: weekday
+
+## Warning in (function (x, y, offset = NULL, misc = NULL, distribution = &quot;bernoulli&quot;, :
+## variable 4: weekday has no variation.
+
+## Warning in preProcess.default(thresh = 0.95, k = 5, freqCut = 19, uniqueCut = 10, :
+## These variables have zero variances: weekday
+
+## Warning in (function (x, y, offset = NULL, misc = NULL, distribution = &quot;bernoulli&quot;, :
+## variable 4: weekday has no variation.
+
+## Warning in preProcess.default(thresh = 0.95, k = 5, freqCut = 19, uniqueCut = 10, :
+## These variables have zero variances: weekday
+
+## Warning in (function (x, y, offset = NULL, misc = NULL, distribution = &quot;bernoulli&quot;, :
+## variable 4: weekday has no variation.
+
+## Warning in preProcess.default(thresh = 0.95, k = 5, freqCut = 19, uniqueCut = 10, :
+## These variables have zero variances: weekday
+
+## Warning in (function (x, y, offset = NULL, misc = NULL, distribution = &quot;bernoulli&quot;, :
+## variable 4: weekday has no variation.
+
+## Warning in preProcess.default(thresh = 0.95, k = 5, freqCut = 19, uniqueCut = 10, :
+## These variables have zero variances: weekday
+
+## Warning in (function (x, y, offset = NULL, misc = NULL, distribution = &quot;bernoulli&quot;, :
+## variable 4: weekday has no variation.
+
+## Warning in preProcess.default(thresh = 0.95, k = 5, freqCut = 19, uniqueCut = 10, :
+## These variables have zero variances: weekday
+
+## Warning in (function (x, y, offset = NULL, misc = NULL, distribution = &quot;bernoulli&quot;, :
+## variable 4: weekday has no variation.
+
+## Warning in preProcess.default(thresh = 0.95, k = 5, freqCut = 19, uniqueCut = 10, :
+## These variables have zero variances: weekday
+
+## Warning in (function (x, y, offset = NULL, misc = NULL, distribution = &quot;bernoulli&quot;, :
+## variable 4: weekday has no variation.
+
+## Warning in preProcess.default(thresh = 0.95, k = 5, freqCut = 19, uniqueCut = 10, :
+## These variables have zero variances: weekday
+
+## Warning in (function (x, y, offset = NULL, misc = NULL, distribution = &quot;bernoulli&quot;, :
+## variable 4: weekday has no variation.
+
+## Warning in preProcess.default(thresh = 0.95, k = 5, freqCut = 19, uniqueCut = 10, :
+## These variables have zero variances: weekday
+
+## Warning in (function (x, y, offset = NULL, misc = NULL, distribution = &quot;bernoulli&quot;, :
+## variable 4: weekday has no variation.
+
+## Warning in preProcess.default(thresh = 0.95, k = 5, freqCut = 19, uniqueCut = 10, :
+## These variables have zero variances: weekday
+
+## Warning in (function (x, y, offset = NULL, misc = NULL, distribution = &quot;bernoulli&quot;, :
+## variable 4: weekday has no variation.
+
+## Warning in preProcess.default(thresh = 0.95, k = 5, freqCut = 19, uniqueCut = 10, :
+## These variables have zero variances: weekday
+
+## Warning in (function (x, y, offset = NULL, misc = NULL, distribution = &quot;bernoulli&quot;, :
+## variable 4: weekday has no variation.
+
+## Warning in preProcess.default(thresh = 0.95, k = 5, freqCut = 19, uniqueCut = 10, :
+## These variables have zero variances: weekday
+
+## Warning in (function (x, y, offset = NULL, misc = NULL, distribution = &quot;bernoulli&quot;, :
+## variable 4: weekday has no variation.
+
+## Warning in preProcess.default(thresh = 0.95, k = 5, freqCut = 19, uniqueCut = 10, :
+## These variables have zero variances: weekday
+
+## Warning in (function (x, y, offset = NULL, misc = NULL, distribution = &quot;bernoulli&quot;, :
+## variable 4: weekday has no variation.
+
+## Warning in preProcess.default(thresh = 0.95, k = 5, freqCut = 19, uniqueCut = 10, :
+## These variables have zero variances: weekday
+
+## Warning in (function (x, y, offset = NULL, misc = NULL, distribution = &quot;bernoulli&quot;, :
+## variable 4: weekday has no variation.
+
+## Warning in preProcess.default(thresh = 0.95, k = 5, freqCut = 19, uniqueCut = 10, :
+## These variables have zero variances: weekday
+
+## Warning in (function (x, y, offset = NULL, misc = NULL, distribution = &quot;bernoulli&quot;, :
+## variable 4: weekday has no variation.
+
+## Warning in preProcess.default(thresh = 0.95, k = 5, freqCut = 19, uniqueCut = 10, :
+## These variables have zero variances: weekday
+
+## Warning in (function (x, y, offset = NULL, misc = NULL, distribution = &quot;bernoulli&quot;, :
+## variable 4: weekday has no variation.
+
+## Warning in preProcess.default(thresh = 0.95, k = 5, freqCut = 19, uniqueCut = 10, :
+## These variables have zero variances: weekday
+
+## Warning in (function (x, y, offset = NULL, misc = NULL, distribution = &quot;bernoulli&quot;, :
+## variable 4: weekday has no variation.
+
+## Warning in preProcess.default(thresh = 0.95, k = 5, freqCut = 19, uniqueCut = 10, :
+## These variables have zero variances: weekday
+
+## Warning in (function (x, y, offset = NULL, misc = NULL, distribution = &quot;bernoulli&quot;, :
+## variable 4: weekday has no variation.
+
+## Warning in preProcess.default(thresh = 0.95, k = 5, freqCut = 19, uniqueCut = 10, :
+## These variables have zero variances: weekday
+
+## Warning in (function (x, y, offset = NULL, misc = NULL, distribution = &quot;bernoulli&quot;, :
+## variable 4: weekday has no variation.
+
+## Warning in preProcess.default(thresh = 0.95, k = 5, freqCut = 19, uniqueCut = 10, :
+## These variables have zero variances: weekday
+
+## Warning in (function (x, y, offset = NULL, misc = NULL, distribution = &quot;bernoulli&quot;, :
+## variable 4: weekday has no variation.
+
+## Warning in preProcess.default(thresh = 0.95, k = 5, freqCut = 19, uniqueCut = 10, :
+## These variables have zero variances: weekday
+
+## Warning in (function (x, y, offset = NULL, misc = NULL, distribution = &quot;bernoulli&quot;, :
+## variable 4: weekday has no variation.
+
+## Warning in preProcess.default(thresh = 0.95, k = 5, freqCut = 19, uniqueCut = 10, :
+## These variables have zero variances: weekday
+
+## Warning in (function (x, y, offset = NULL, misc = NULL, distribution = &quot;bernoulli&quot;, :
+## variable 4: weekday has no variation.
+
+## Warning in preProcess.default(thresh = 0.95, k = 5, freqCut = 19, uniqueCut = 10, :
+## These variables have zero variances: weekday
+
+## Warning in (function (x, y, offset = NULL, misc = NULL, distribution = &quot;bernoulli&quot;, :
+## variable 4: weekday has no variation.
+
+## Warning in preProcess.default(thresh = 0.95, k = 5, freqCut = 19, uniqueCut = 10, :
+## These variables have zero variances: weekday
+
+## Warning in (function (x, y, offset = NULL, misc = NULL, distribution = &quot;bernoulli&quot;, :
+## variable 4: weekday has no variation.
+
+## Warning in preProcess.default(thresh = 0.95, k = 5, freqCut = 19, uniqueCut = 10, :
+## These variables have zero variances: weekday
+
+## Warning in (function (x, y, offset = NULL, misc = NULL, distribution = &quot;bernoulli&quot;, :
+## variable 4: weekday has no variation.
+
+## Warning in preProcess.default(thresh = 0.95, k = 5, freqCut = 19, uniqueCut = 10, :
+## These variables have zero variances: weekday
+
+## Warning in (function (x, y, offset = NULL, misc = NULL, distribution = &quot;bernoulli&quot;, :
+## variable 4: weekday has no variation.
+
+## Warning in preProcess.default(thresh = 0.95, k = 5, freqCut = 19, uniqueCut = 10, :
+## These variables have zero variances: weekday
+
+## Warning in (function (x, y, offset = NULL, misc = NULL, distribution = &quot;bernoulli&quot;, :
+## variable 4: weekday has no variation.
+
+## Warning in preProcess.default(thresh = 0.95, k = 5, freqCut = 19, uniqueCut = 10, :
+## These variables have zero variances: weekday
+
+## Warning in (function (x, y, offset = NULL, misc = NULL, distribution = &quot;bernoulli&quot;, :
+## variable 4: weekday has no variation.
+
+## Warning in preProcess.default(thresh = 0.95, k = 5, freqCut = 19, uniqueCut = 10, :
+## These variables have zero variances: weekday
+
+## Warning in (function (x, y, offset = NULL, misc = NULL, distribution = &quot;bernoulli&quot;, :
+## variable 4: weekday has no variation.
+
+## Warning in preProcess.default(thresh = 0.95, k = 5, freqCut = 19, uniqueCut = 10, :
+## These variables have zero variances: weekday
+
+## Warning in (function (x, y, offset = NULL, misc = NULL, distribution = &quot;bernoulli&quot;, :
+## variable 4: weekday has no variation.
+
+## Warning in preProcess.default(thresh = 0.95, k = 5, freqCut = 19, uniqueCut = 10, :
+## These variables have zero variances: weekday
+
+## Warning in (function (x, y, offset = NULL, misc = NULL, distribution = &quot;bernoulli&quot;, :
+## variable 4: weekday has no variation.
+
+## Warning in preProcess.default(thresh = 0.95, k = 5, freqCut = 19, uniqueCut = 10, :
+## These variables have zero variances: weekday
+
+## Warning in (function (x, y, offset = NULL, misc = NULL, distribution = &quot;bernoulli&quot;, :
+## variable 4: weekday has no variation.
+
+## Warning in preProcess.default(thresh = 0.95, k = 5, freqCut = 19, uniqueCut = 10, :
+## These variables have zero variances: weekday
+
+## Warning in (function (x, y, offset = NULL, misc = NULL, distribution = &quot;bernoulli&quot;, :
+## variable 4: weekday has no variation.
+
+## Warning in preProcess.default(thresh = 0.95, k = 5, freqCut = 19, uniqueCut = 10, :
+## These variables have zero variances: weekday
+
+## Warning in (function (x, y, offset = NULL, misc = NULL, distribution = &quot;bernoulli&quot;, :
+## variable 4: weekday has no variation.
+
+## Warning in preProcess.default(thresh = 0.95, k = 5, freqCut = 19, uniqueCut = 10, :
+## These variables have zero variances: weekday
+
+## Warning in (function (x, y, offset = NULL, misc = NULL, distribution = &quot;bernoulli&quot;, :
+## variable 4: weekday has no variation.
+
+## Warning in preProcess.default(thresh = 0.95, k = 5, freqCut = 19, uniqueCut = 10, :
+## These variables have zero variances: weekday
+
+## Warning in (function (x, y, offset = NULL, misc = NULL, distribution = &quot;bernoulli&quot;, :
+## variable 4: weekday has no variation.
+
+## Warning in preProcess.default(thresh = 0.95, k = 5, freqCut = 19, uniqueCut = 10, :
+## These variables have zero variances: weekday
+
+## Warning in (function (x, y, offset = NULL, misc = NULL, distribution = &quot;bernoulli&quot;, :
+## variable 4: weekday has no variation.
+
+## Warning in preProcess.default(thresh = 0.95, k = 5, freqCut = 19, uniqueCut = 10, :
+## These variables have zero variances: weekday
+
+## Warning in (function (x, y, offset = NULL, misc = NULL, distribution = &quot;bernoulli&quot;, :
+## variable 4: weekday has no variation.
+</code></pre>
+<div class="sourceCode" id="cb17"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1"></a>boostFit<span class="op">$</span>results</span>
+<span id="cb17-2"><a href="#cb17-2"></a>boostFit<span class="op">$</span>bestTune</span></code></pre></div>
+<p>Finally, we will make predictions using our best model fits and data from the test set. We can compare RMSE to determine which one is best (smaller RMSE is better).</p>
+<div class="sourceCode" id="cb18"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1"></a><span class="co">#predict values on test set and compare RMSEs</span></span>
+<span id="cb18-2"><a href="#cb18-2"></a>treePred&lt;-<span class="kw">predict</span>(treeFit,<span class="dt">newdata=</span>dplyr<span class="op">::</span><span class="kw">select</span>(bikeTest,<span class="op">-</span>cnt))</span>
+<span id="cb18-3"><a href="#cb18-3"></a>a&lt;-<span class="st"> </span><span class="kw">postResample</span>(treePred,bikeTest<span class="op">$</span>cnt)</span>
+<span id="cb18-4"><a href="#cb18-4"></a></span>
+<span id="cb18-5"><a href="#cb18-5"></a>boostPred&lt;-<span class="kw">predict</span>(boostFit,<span class="dt">newdata=</span>dplyr<span class="op">::</span><span class="kw">select</span>(bikeTest,<span class="op">-</span>cnt))</span>
+<span id="cb18-6"><a href="#cb18-6"></a>b&lt;-<span class="st"> </span><span class="kw">postResample</span>(boostPred,bikeTest<span class="op">$</span>cnt)</span></code></pre></div>
+<p>As expected, the boosted tree tends to have lower RMSE when applied to the test data. By fitting multiple trees sequentially, rather than just a single tree, the boosting method provides a better prediction.</p>
+<h1 id="second-part">Second Part</h1>
+<h2 id="linear-model-fit">Linear model fit</h2>
+<div class="sourceCode" id="cb19"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1"></a><span class="co">#Secondary Analysis of the tree fit</span></span>
+<span id="cb19-2"><a href="#cb19-2"></a></span>
+<span id="cb19-3"><a href="#cb19-3"></a>Fit2&lt;-<span class="st"> </span><span class="kw">lm</span>(cnt <span class="op">~</span><span class="st">  </span>season <span class="op">+</span><span class="st"> </span>weathersit <span class="op">+</span><span class="st"> </span>windspeed <span class="op">+</span><span class="st"> </span>atemp, <span class="dt">data=</span>bikeTrain)</span>
+<span id="cb19-4"><a href="#cb19-4"></a>Fit2</span></code></pre></div>
+<pre><code>## 
+## Call:
+## lm(formula = cnt ~ season + weathersit + windspeed + atemp, data = bikeTrain)
+## 
+## Coefficients:
+## (Intercept)       season   weathersit    windspeed        atemp  
+##      2057.9        423.7       -788.1      -1999.9       6130.3
+</code></pre>
+<div class="sourceCode" id="cb21"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1"></a><span class="co">#predict values on test set and compare RMSEs</span></span>
+<span id="cb21-2"><a href="#cb21-2"></a>Pred2&lt;-<span class="kw">predict</span>(Fit2,<span class="dt">newdata=</span>dplyr<span class="op">::</span><span class="kw">select</span>(bikeTest,<span class="op">-</span>cnt, season, weathersit, windspeed, atemp))</span>
+<span id="cb21-3"><a href="#cb21-3"></a>c&lt;-<span class="st"> </span><span class="kw">postResample</span>(Pred2,bikeTest<span class="op">$</span>cnt)</span></code></pre></div>
+<p>#table the RMSE from both of the model fits</p>
+<div class="sourceCode" id="cb22"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1"></a>d&lt;-<span class="st"> </span><span class="kw">c</span>(a[<span class="dv">1</span>], b[<span class="dv">1</span>], c[<span class="dv">1</span>])</span>
+<span id="cb22-2"><a href="#cb22-2"></a><span class="kw">names</span>(d)&lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;Tree_RMSE&quot;</span>,<span class="st">&quot;Boosted_RMSE&quot;</span>, <span class="st">&quot;LM_RMSE&quot;</span> )</span>
+<span id="cb22-3"><a href="#cb22-3"></a>d</span></code></pre></div>
+<pre><code>##    Tree_RMSE Boosted_RMSE      LM_RMSE 
+##    1424.9460     631.7983    1559.4250
+</code></pre>
+<p>From the above table the model having lowest value of RMSE is chosen to be appropriate to fit the data set.</p>
+
+</body>
+</html>

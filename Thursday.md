@@ -28,29 +28,7 @@ will then filter to the weekday of interest.
 ``` r
 #Read in bike share data
 bike<-read_csv("day.csv")
-```
 
-    ## Parsed with column specification:
-    ## cols(
-    ##   instant = col_double(),
-    ##   dteday = col_date(format = ""),
-    ##   season = col_double(),
-    ##   yr = col_double(),
-    ##   mnth = col_double(),
-    ##   holiday = col_double(),
-    ##   weekday = col_double(),
-    ##   workingday = col_double(),
-    ##   weathersit = col_double(),
-    ##   temp = col_double(),
-    ##   atemp = col_double(),
-    ##   hum = col_double(),
-    ##   windspeed = col_double(),
-    ##   casual = col_double(),
-    ##   registered = col_double(),
-    ##   cnt = col_double()
-    ## )
-
-``` r
 #Drop casual and registered variables, then filter to desired weekday
 bike<-select(bike,-casual,-registered) %>% filter(weekday==params$day)
 ```
@@ -81,28 +59,26 @@ summary(bikeTrain,digits=2)
     ##  Mean   :360   Mean   :2011-12-25   Mean   :2.6   Mean   :0.47   Mean   : 6.7  
     ##  3rd Qu.:519   3rd Qu.:2012-06-01   3rd Qu.:4.0   3rd Qu.:1.00   3rd Qu.: 9.2  
     ##  Max.   :720   Max.   :2012-12-20   Max.   :4.0   Max.   :1.00   Max.   :12.0  
-    ##     holiday         weekday    workingday     weathersit       temp     
-    ##  Min.   :0.000   Min.   :4   Min.   :0.00   Min.   :1.0   Min.   :0.17  
-    ##  1st Qu.:0.000   1st Qu.:4   1st Qu.:1.00   1st Qu.:1.0   1st Qu.:0.36  
-    ##  Median :0.000   Median :4   Median :1.00   Median :1.0   Median :0.50  
-    ##  Mean   :0.026   Mean   :4   Mean   :0.97   Mean   :1.4   Mean   :0.51  
-    ##  3rd Qu.:0.000   3rd Qu.:4   3rd Qu.:1.00   3rd Qu.:2.0   3rd Qu.:0.66  
-    ##  Max.   :1.000   Max.   :4   Max.   :1.00   Max.   :3.0   Max.   :0.81  
-    ##      atemp           hum         windspeed          cnt      
-    ##  Min.   :0.15   Min.   :0.00   Min.   :0.053   Min.   : 623  
-    ##  1st Qu.:0.37   1st Qu.:0.54   1st Qu.:0.136   1st Qu.:3271  
-    ##  Median :0.49   Median :0.60   Median :0.183   Median :4670  
-    ##  Mean   :0.48   Mean   :0.61   Mean   :0.190   Mean   :4627  
-    ##  3rd Qu.:0.62   3rd Qu.:0.70   3rd Qu.:0.226   3rd Qu.:6249  
-    ##  Max.   :0.83   Max.   :0.94   Max.   :0.442   Max.   :7765
+    ##     holiday         weekday    workingday     weathersit       temp          atemp     
+    ##  Min.   :0.000   Min.   :4   Min.   :0.00   Min.   :1.0   Min.   :0.16   Min.   :0.15  
+    ##  1st Qu.:0.000   1st Qu.:4   1st Qu.:1.00   1st Qu.:1.0   1st Qu.:0.36   1st Qu.:0.37  
+    ##  Median :0.000   Median :4   Median :1.00   Median :1.0   Median :0.50   Median :0.49  
+    ##  Mean   :0.026   Mean   :4   Mean   :0.97   Mean   :1.4   Mean   :0.51   Mean   :0.48  
+    ##  3rd Qu.:0.000   3rd Qu.:4   3rd Qu.:1.00   3rd Qu.:2.0   3rd Qu.:0.66   3rd Qu.:0.62  
+    ##  Max.   :1.000   Max.   :4   Max.   :1.00   Max.   :3.0   Max.   :0.81   Max.   :0.83  
+    ##       hum         windspeed          cnt      
+    ##  Min.   :0.00   Min.   :0.053   Min.   : 623  
+    ##  1st Qu.:0.54   1st Qu.:0.136   1st Qu.:3271  
+    ##  Median :0.60   Median :0.183   Median :4670  
+    ##  Mean   :0.61   Mean   :0.190   Mean   :4627  
+    ##  3rd Qu.:0.70   3rd Qu.:0.226   3rd Qu.:6249  
+    ##  Max.   :0.94   Max.   :0.442   Max.   :7765
 
 ``` r
 #view the distribution of the variable of interest
 g<-ggplot(bikeTrain,aes(x=cnt,y=..density..))
 g+geom_histogram()+labs(title="Histogram of Bike Counts")#how to fix y-axis %s
 ```
-
-    ## `stat_bin()` using `bins = 30`. Pick better value with `binwidth`.
 
 ![](Thursday_files/figure-gfm/EDA-1.png)<!-- -->
 
@@ -145,7 +121,7 @@ bikeTrain<-bikeTrain %>% select(-instant,-dteday)
 #we can also remove variables where their information is captured by other variables
 #i.e., we do not need to include the weekday and workingday indicators since we are
 #going to create separate reports for each weekday.
-bikeTrain<-bikeTrain %>% select(-holiday,-weekday,-workingday,-temp, -hum)
+bikeTrain<-bikeTrain %>% select(-holiday,-workingday,-temp, -hum)
 ```
 
 Now we are ready to fit the models. First we will fit a tree model,
@@ -168,21 +144,8 @@ treeFit<-train(cnt ~ ., data=bikeTrain, method="rpart",
                trControl=train_control, 
                tuneGrid=NULL)
 treeFit$results
-```
-
-    ##          cp     RMSE   Rsquared      MAE
-    ## 1 0.1352870 1289.153 0.54636622 1122.810
-    ## 2 0.1875221 1460.027 0.40936541 1261.016
-    ## 3 0.4667418 2119.234 0.01210054 1937.674
-
-``` r
 treeFit$bestTune
-```
 
-    ##         cp
-    ## 1 0.135287
-
-``` r
 #boosted tree model
 boostFit<-train(cnt ~ ., data=bikeTrain, method="gbm", 
                 preProcess=c("center","scale"),
@@ -190,35 +153,8 @@ boostFit<-train(cnt ~ ., data=bikeTrain, method="gbm",
                 tuneGrid=NULL, verbose=FALSE) #why does it produce all those different iterations, with no apparent variation?
 
 boostFit$results
-```
-
-    ##   n.trees interaction.depth shrinkage n.minobsinnode     RMSE  Rsquared
-    ## 1      50                 1       0.1             10 812.5838 0.8163856
-    ## 2      50                 2       0.1             10 825.2998 0.8087028
-    ## 3      50                 3       0.1             10 790.6724 0.8248495
-    ## 4     100                 1       0.1             10 803.5476 0.8177617
-    ## 5     100                 2       0.1             10 777.4192 0.8295261
-    ## 6     100                 3       0.1             10 759.2488 0.8374275
-    ## 7     150                 1       0.1             10 808.8668 0.8153416
-    ## 8     150                 2       0.1             10 778.5537 0.8294458
-    ## 9     150                 3       0.1             10 766.5425 0.8341938
-    ##        MAE
-    ## 1 622.9556
-    ## 2 632.3371
-    ## 3 612.0813
-    ## 4 615.6472
-    ## 5 580.2611
-    ## 6 577.7925
-    ## 7 603.0952
-    ## 8 577.1669
-    ## 9 578.3788
-
-``` r
 boostFit$bestTune
 ```
-
-    ##   n.trees interaction.depth shrinkage n.minobsinnode
-    ## 6     100                 3       0.1             10
 
 Finally, we will make predictions using our best model fits and data
 from the test set. We can compare RMSE to determine which one is best
@@ -227,20 +163,51 @@ from the test set. We can compare RMSE to determine which one is best
 ``` r
 #predict values on test set and compare RMSEs
 treePred<-predict(treeFit,newdata=dplyr::select(bikeTest,-cnt))
-postResample(treePred,bikeTest$cnt)
-```
+a<- postResample(treePred,bikeTest$cnt)
 
-    ##         RMSE     Rsquared          MAE 
-    ## 1106.5819589    0.6542639  921.9167920
-
-``` r
 boostPred<-predict(boostFit,newdata=dplyr::select(bikeTest,-cnt))
-postResample(boostPred,bikeTest$cnt)
+b<- postResample(boostPred,bikeTest$cnt)
 ```
-
-    ##        RMSE    Rsquared         MAE 
-    ## 544.0830043   0.9174626 383.7867219
 
 As expected, the boosted tree tends to have lower RMSE when applied to
 the test data. By fitting multiple trees sequentially, rather than just
 a single tree, the boosting method provides a better prediction.
+
+# Second Part
+
+## Linear model fit
+
+``` r
+#Secondary Analysis of the tree fit
+
+Fit2<- lm(cnt ~  season + weathersit + windspeed + atemp, data=bikeTrain)
+Fit2
+```
+
+    ## 
+    ## Call:
+    ## lm(formula = cnt ~ season + weathersit + windspeed + atemp, data = bikeTrain)
+    ## 
+    ## Coefficients:
+    ## (Intercept)       season   weathersit    windspeed        atemp  
+    ##      3353.9        144.5       -955.8      -4703.5       6480.3
+
+``` r
+#predict values on test set and compare RMSEs
+Pred2<-predict(Fit2,newdata=dplyr::select(bikeTest,-cnt, season, weathersit, windspeed, atemp))
+c<- postResample(Pred2,bikeTest$cnt)
+```
+
+\#table the RMSE from both of the model fits
+
+``` r
+d<- c(a[1], b[1], c[1])
+names(d)<- c("Tree_RMSE","Boosted_RMSE", "LM_RMSE" )
+d
+```
+
+    ##    Tree_RMSE Boosted_RMSE      LM_RMSE 
+    ##     1106.582      544.083     1308.627
+
+From the above table the model having lowest value of RMSE is chosen to
+be appropriate to fit the data set.
